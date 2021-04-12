@@ -27,6 +27,14 @@ A3
 ![image](https://user-images.githubusercontent.com/77159913/114348353-c0b81580-9ba9-11eb-8d77-a35b5f88b7ab.png)
 ![image](https://user-images.githubusercontent.com/77159913/114348393-cdd50480-9ba9-11eb-898c-bd166ce77bc1.png)
 ![image](https://user-images.githubusercontent.com/77159913/114348421-d6c5d600-9ba9-11eb-8c56-737cb77de3c2.png)
-
-
 ![image](https://user-images.githubusercontent.com/77159913/114349162-e4c82680-9baa-11eb-936c-1ed12d917b88.png)
+
+
+
+
+B0 
+
+![image](https://user-images.githubusercontent.com/77159913/114349744-a4b57380-9bab-11eb-9fd7-db31303b91e3.png)
+![image](https://user-images.githubusercontent.com/77159913/114349912-d8909900-9bab-11eb-99c4-263850be89ab.png)
+![image](https://user-images.githubusercontent.com/77159913/114349943-e3e3c480-9bab-11eb-981d-fa72df5b7c76.png)
+
