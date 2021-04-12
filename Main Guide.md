@@ -51,6 +51,8 @@ tFAW is the 'Four activate window'. This window defines how many clock cycles a 
 t32AW is a timing used by GDDR memory system to define the 32 activate window. This is just like tFAW only 32 activations instead of 4.
 
 ## tWTR
+![image](https://user-images.githubusercontent.com/77159913/114342058-754c3a00-9b9e-11eb-9a82-ec9ca01f78c7.png)
+![JESD79-4C P89](https://www.jedec.org/standards-documents/docs/jesd79-4a)
 
 ## tRTP
 
