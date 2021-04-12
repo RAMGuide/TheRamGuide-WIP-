@@ -28,6 +28,8 @@
 ## What Is DRAM
 DRAM is the second fastest form of memory (after SRAM). There are several types of DRAM too (DDR, GDDR, HBM, etc.); however, we're going to focus on the violate state of what most refer to as RAM as in DIMMs. This is a space for us to store data that we cannot handle in L1/L2/L3 cache but still need relatively quicker (slower than that gets kicked to the storages like SSDs and HDD possibly through a pagefile). 
 
+Optimizing the speed at which the data is written and read and the latency to "trip back" to the CPU largely determines the performance of such DIMMs and whether or not performance can be increase further. 
+
 ## Why Do We Care
 
 ## Types of DRAM
