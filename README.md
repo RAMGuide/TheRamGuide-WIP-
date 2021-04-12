@@ -17,7 +17,8 @@
 5. [PCB](#pcb)
 6. [Brands](#brands)
 7. [Memory Timings](#memory-timings)
-8. [Memory Subtimings](#memory-subtimings)
+    1. [Primary Timings](#primary-timings)
+    2. [Subtimings](#subtimings)
 9. [Motherboards and RAM](#motherboards-and-ram)
 10. [CPUs and RAM](#cpus-and-ram)
 11. [TL:DR](#tldr)
@@ -37,8 +38,6 @@
 ## Brands
 
 ## Memory Timings
-
-## Memory Subtimings
 
 ## Motherboards and RAM
 
