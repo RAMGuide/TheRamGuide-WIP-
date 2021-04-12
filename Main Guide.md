@@ -4,6 +4,8 @@ This is a guide designed to teach you the basics of DRAM from both theoretical a
 
 # Memory Timings
 
+# Primary Timings
+
 # tAA
 
 # tCWL
@@ -15,3 +17,4 @@ This is a guide designed to teach you the basics of DRAM from both theoretical a
 # tRAS
 
 # tRC
+
