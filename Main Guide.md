@@ -6,7 +6,7 @@ This is a guide designed to teach you the basics of DRAM from both theoretical a
 
 ## Primary Timings
 
-## tAA (Cas latency)
+## tAA (Cas latency, CL)
 
 ## tCWL
 
@@ -22,7 +22,14 @@ This is a guide designed to teach you the basics of DRAM from both theoretical a
 
 ## tCCD
 
-Comomnly spilt into tRDRD and tWRWR timings.
+tCCD is the CAS to CAS command delay for the DRAM. This means it is the gap in clock cycles between two CAS commands being addressed. On DDR4 and DDR5 this timing is spilt into tCCD_S and tCCD_L for the CAS to CAS command delay for a different bank and same bank respectively. This CAS to CAS delay applies to both read to read and write to write scenarios.
+
+As this applies to read to read and write to write scenarios many platforms spilt these timings into tRDRD and tWRWR timings. More detail on these timings below where tertiary timings are explained.
+
+Myths: 
+On mainstream DDR4 Intel changing tCCD_S and tCCD_L does not do anything if tRDRD_sg, tRDRD_dg, tWRWR_sg or tWRWR_dg are not changed. This timing does not exist to the Intel mainstream IMC although being present in many board bios'. 
+
+
 
 ## tRRD
 
@@ -36,15 +43,17 @@ t32AW
 
 ## tWR
 
-
-
-## tRFC
-
-tRFC is the refresh period. Meaning it is the time that the memory takes to refresh in clock cycles. Lower is better for this timing as it reduces the amount of time spent refreshing and maximises useful operational time.
-
 ## tREFI
 
 tREFI is the average periodic refresh interval for the DRAM. Meaning on average every tREFI there will be a refresh command addressed. Refresh commands however can be postponed up to 8 times on DDR3 & DDR4 and 4 times on DDR5. These refreshes are postponed, not cancelled. So they will occur eventually and the average time spent refreshing is the same. The time spent refreshing can be calculated by tRFC/tREFI. E.G 400 tRFC and 65535 tREFI, 400/65535 = 0.610360876%
+
+## tRFC
+
+tRFC is the refresh period. Meaning it is the time that the memory takes to refresh in clock cycles. Lower is better for this timing as it reduces the amount of time spent refreshing and maximises useful operational time. This timing can be very performance impactful in situations where tREFI is at Jedec or low such as when using a Ryzen system as Ryzen systems do not allow for tREFI to be modified from Jedec spec. However with a higher tREFI the performance impact is lessened, this is due to the time spent refreshing in % being impactful for performance. With a higher tREFI the reduction in this metric from lets say halving tRFC is lessened.
+
+tREFI increases the DRAM's sensitivity to temperature as the hotter the DRAM is the faster the charge stored in the DRAM's capacitor leaks. tREFI however also reduces power output and thus temperature as the DRAM consumes more power when refreshing then under any other operation. 
+
+tREFI although being a temperature sensitive timing can generally simplely be maxed out under majority of circumstances. 'Maxing out' is setting the timing to the maximum value the platform supports. Whether that be a bios limitation or a CPU register limitation though usually the latter. On most platforms with this timings exposed this value is 65535 for tREFI.
 
 ## tCKE
 
@@ -60,3 +69,4 @@ tRDWR
 
 tWRRD
 
+tWRWR
