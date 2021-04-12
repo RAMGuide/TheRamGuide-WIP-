@@ -8,10 +8,10 @@
 7. [Memory Timings](#memory-timings)
 8. [Memory Subtimings](#memory-subtimings)
 9. [Motherboards and RAM](#motherboards-and-ram)
-10.[CPUs and RAM](#cpus-and-ram)
-11.[TL:DR](#tldr)
-12.[What RAM to buy](#buying-guide)
-13.[Chipset/platform Specific Settings and Timings](#platform-guides)
+10. [CPUs and RAM](#cpus-and-ram)
+11. [TL:DR](#tldr)
+12. [What RAM to buy](#buying-guide)
+13. [Chipset/platform Specific Settings and Timings](#platform-guides)
 
 # Credits
 ## Guide was made by:
