@@ -40,7 +40,7 @@ t32AW
 
 # tRFC
 
-tRFC is the refresh period. Meaning it is the time 
+tRFC is the refresh period. Meaning it is the time that the memory takes to refresh in clock cycles. Lower is better for this timing as it reduces the amount of time spent refreshing and maximises useful operational time.
 
 # tREFI
 
