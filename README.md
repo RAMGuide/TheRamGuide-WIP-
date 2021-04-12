@@ -55,6 +55,6 @@ DRAM is the second fastest form of memory (after SRAM). There are several types 
 Don't buy Corsair
 
 ## Buying Guide
-Crucial croomers are the way
+Crucial coomers are the way
 
 ## Platform Guides
