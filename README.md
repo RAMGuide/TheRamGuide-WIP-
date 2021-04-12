@@ -1,3 +1,12 @@
+# Credits
+## Guide was made by:
+
+*Arshia*, Tech enthusiast, Arshia#2457 on Discord
+
+*Qubex*, Tech enthusiast, QUBEX#0001 on Discord
+
+*Alatron*, Tech enthusiast, alatron978#7416 on Discord
+
 # Table of Contents
 1. [What is DRAM](#DRAM)
 2. [Why Do we Care](#Why)
@@ -12,12 +21,3 @@
 11. [TL:DR](#tldr)
 12. [What RAM to buy](#buying-guide)
 13. [Chipset/platform Specific Settings and Timings](#platform-guides)
-
-# Credits
-## Guide was made by:
-
-*Arshia*, Tech enthusiast, Arshia#2457 on Discord
-
-*Qubex*, Tech enthusiast, QUBEX#0001 on Discord
-
-*Alatron*, Tech enthusiast, alatron978#7416 on Discord
