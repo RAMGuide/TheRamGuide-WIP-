@@ -18,3 +18,19 @@ This is a guide designed to teach you the basics of DRAM from both theoretical a
 
 # tRC
 
+# Subtimings 
+
+# tCCD
+
+# tRRD
+
+# tFAW
+
+t32AW
+
+# tWTR
+
+# tRTP
+
+# tWR
+
