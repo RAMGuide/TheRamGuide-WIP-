@@ -34,3 +34,21 @@ t32AW
 
 # tWR
 
+# tRFC
+
+# tREFI
+
+# tCKE
+
+# Tertiary timings
+
+Tertiary timings are platform specific timings that dictate delay between read and write operations. Thus including read to read, read to write, write to read and write to write.
+
+# DDR4 mainsteam Intel
+
+tRDRD
+
+tRDWR
+
+tWRRD
+
