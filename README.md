@@ -39,9 +39,9 @@
 
 ## Memory Timings
 
-# Primary Timings
+### Primary Timings
 
-# Subtimings
+### Subtimings
 
 ## Motherboards and RAM
 
