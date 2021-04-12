@@ -29,7 +29,8 @@ As this applies to read to read and write to write scenarios many platforms spil
 Myths: 
 A common myth or these timings is that raising them can help with achieveing higher clock speeds on mainstream DDR4 Intel. However changing tCCD_S and tCCD_L does not do anything if tRDRD_sg, tRDRD_dg, tWRWR_sg or tWRWR_dg are not changed. This timing does not exist to the Intel mainstream IMC although being present in many board bios'. 
 
-
+![image](https://user-images.githubusercontent.com/77159913/114341623-8d6f8980-9b9d-11eb-9596-94d4ee01b230.png)
+![JESD79-4C P87](https://www.jedec.org/standards-documents/docs/jesd79-4a)
 
 
 ## tRRD
