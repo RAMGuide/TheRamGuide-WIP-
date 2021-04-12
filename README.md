@@ -9,10 +9,10 @@
 
 # Table of Contents
 1. [What is DRAM](#DRAM)
-2. [Why Do we Care](#Why)
-3. [Types of DRAM](#exterior)
-4. [Memory ICs](#interior)
-5. [PCB](#PCB)
+2. [Why Do We Care](#why-do-we-care)
+3. [Types of DRAM](#types-of-dram)
+4. [Memory ICs](#memory-ics)
+5. [PCB](#pcb)
 6. [Brands](#brands)
 7. [Memory Timings](#memory-timings)
 8. [Memory Subtimings](#memory-subtimings)
@@ -21,3 +21,27 @@
 11. [TL:DR](#tldr)
 12. [What RAM to buy](#buying-guide)
 13. [Chipset/platform Specific Settings and Timings](#platform-guides)
+
+## What Is DRAM
+
+## Why Do We Care
+
+## Types of DRAM
+
+## Memory ICs
+
+## PCBs
+
+## Brands
+
+## Memory Timings
+
+## Memory Subtimings
+
+## Motherboards and RAM
+
+## TLDR
+
+## Buying Guide
+
+## Platform Guides
