@@ -39,7 +39,8 @@ A common myth or these timings is that raising them can help with achieveing hig
 tFAW is the 'Four activate window'. This window defines how many clock cycles a window lasts for with every window allowing for 4 activations to occur inside of it. As the gap between activations is tRRD the minimum tFAW can be whilst having a performance impact is tRRD_S * 4 or tRRD_L * 4. tFAW can be set below this but it just won't do anything because at the minimum performance impactful value tFAW is not limiting the activation commands ever. If tRAS is higher then this value it can cause the DRAM to pause and do nothing if 4 consecutive tRRD commands are addressed.
 
 ![image](https://user-images.githubusercontent.com/77159913/114340815-bbec6500-9b9b-11eb-9558-12b37ce42b4f.png)
-JESD79-4C P88 https://www.jedec.org/standards-documents/docs/jesd79-4a
+![JESD79-4C P88](https://www.jedec.org/standards-documents/docs/jesd79-4a)
+ 
 
 
 
