@@ -11,25 +11,25 @@
 
 # Table of Contents
 1. [What is DRAM](#DRAM)
-2. [Why Do We Care](#why-do-we-care)
-3. [Types of DRAM](#types-of-dram)
-4. [Memory ICs](#memory-ics)
-5. [PCB](#pcb)
-6. [Brands](#brands)
-7. [Memory Timings](#memory-timings)
+   1. [Why Do We Care](#why-do-we-care)
+2. [Types of DRAM](#types-of-dram)
+3. [Memory ICs](#memory-ics)
+4. [PCB](#pcb)
+5. [Brands](#brands)
+6. [Memory Timings](#memory-timings)
     1. [Primary Timings](#primary-timings)
     2. [Subtimings](#subtimings)
     3. [Tertiary Timings](#tertiary-timings)
-9. [Motherboards and RAM](#motherboards-and-ram)
-10. [CPUs and RAM](#cpus-and-ram)
-11. [TL:DR](#tldr)
-12. [What RAM to buy](#buying-guide)
-13. [Chipset/platform Specific Settings and Timings](#platform-guides)
+7. [Motherboards and RAM](#motherboards-and-ram)
+8. [CPUs and RAM](#cpus-and-ram)
+9. [TL:DR](#tldr)
+10. [What RAM to buy](#buying-guide)
+11. [Chipset/platform Specific Settings and Timings](#platform-guides)
 
 ## What Is DRAM
 
 
-## Why Do We Care
+### Why Do We Care
 Optimizing the speed at which the data is written and read and the latency to "trip back" to the CPU largely determines the performance of such DIMMs and whether or not--with the help of assuming other factors like CPU/GPU/monitor resolution/application or gaming/graphical fidelity--we can perceive a difference in the real world.
 
 ## Types of DRAM
