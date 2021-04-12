@@ -22,6 +22,8 @@ This is a guide designed to teach you the basics of DRAM from both theoretical a
 
 # tCCD
 
+Comomnly spilt into tRDRD and tWRWR timings.
+
 # tRRD
 
 # tFAW
