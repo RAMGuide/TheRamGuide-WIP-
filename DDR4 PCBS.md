@@ -5,3 +5,8 @@ A0
 ![image](https://user-images.githubusercontent.com/77159913/114346723-44243780-9ba7-11eb-9810-cb6c3050640a.png)
 
 A1
+
+![image](https://user-images.githubusercontent.com/77159913/114347819-eee92580-9ba8-11eb-819b-9e8b3bceaf14.png)
+![image](https://user-images.githubusercontent.com/77159913/114347832-f7416080-9ba8-11eb-974e-571f0dfc2903.png)
+![image](https://user-images.githubusercontent.com/77159913/114347842-fb6d7e00-9ba8-11eb-9422-6b0a0ed5b63d.png)
+![image](https://user-images.githubusercontent.com/77159913/114347881-0e804e00-9ba9-11eb-9254-4bf328377664.png)
