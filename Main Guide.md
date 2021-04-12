@@ -36,9 +36,15 @@ t32AW
 
 # tWR
 
+
+
 # tRFC
 
+tRFC is the refresh period. Meaning it is the time 
+
 # tREFI
+
+tREFI is the average periodic refresh interval for the DRAM. 
 
 # tCKE
 
