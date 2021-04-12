@@ -19,6 +19,7 @@
 7. [Memory Timings](#memory-timings)
     1. [Primary Timings](#primary-timings)
     2. [Subtimings](#subtimings)
+    3. [Tertiary Timings](#tertiary-timings)
 9. [Motherboards and RAM](#motherboards-and-ram)
 10. [CPUs and RAM](#cpus-and-ram)
 11. [TL:DR](#tldr)
@@ -45,6 +46,8 @@ DRAM is the second fastest form of memory (after SRAM). There are several types 
 ### Primary Timings
 
 ### Subtimings
+
+### Tertiary Timings
 
 ## Motherboards and RAM
 
