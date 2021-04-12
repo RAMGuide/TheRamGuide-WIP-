@@ -17,6 +17,7 @@ A2
 ![image](https://user-images.githubusercontent.com/77159913/114348177-89e1ff80-9ba9-11eb-815f-24fc93ba1a7d.png)
 ![image](https://user-images.githubusercontent.com/77159913/114348247-9fefc000-9ba9-11eb-8eba-233aa819d3f6.png)
 ![image](https://user-images.githubusercontent.com/77159913/114348265-a54d0a80-9ba9-11eb-83c9-48b0d5967556.png)
+![image](https://user-images.githubusercontent.com/77159913/114349498-57d19d00-9bab-11eb-9046-9e7b0dbd390e.png)
 
 A3
 
@@ -25,3 +26,6 @@ A3
 ![image](https://user-images.githubusercontent.com/77159913/114348353-c0b81580-9ba9-11eb-8d77-a35b5f88b7ab.png)
 ![image](https://user-images.githubusercontent.com/77159913/114348393-cdd50480-9ba9-11eb-898c-bd166ce77bc1.png)
 ![image](https://user-images.githubusercontent.com/77159913/114348421-d6c5d600-9ba9-11eb-8c56-737cb77de3c2.png)
+
+
+![image](https://user-images.githubusercontent.com/77159913/114349162-e4c82680-9baa-11eb-936c-1ed12d917b88.png)
