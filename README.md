@@ -39,6 +39,10 @@
 
 ## Memory Timings
 
+# Primary Timings
+
+# Subtimings
+
 ## Motherboards and RAM
 
 ## TLDR
