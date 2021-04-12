@@ -6,7 +6,7 @@ This is a guide designed to teach you the basics of DRAM from both theoretical a
 
 # Primary Timings
 
-# tAA
+# tAA (Cas latency)
 
 # tCWL
 
