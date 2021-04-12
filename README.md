@@ -68,3 +68,8 @@ If you are comfortable with the concept of RAM overclocking, we strongly recomme
 Finally, before we give our suggestions of DDR4 UDIMM memory kits, 
 
 ## Platform Guides
+
+
+![image](https://user-images.githubusercontent.com/77159913/114345702-8a789700-9ba5-11eb-8701-2bd3ce015b4e.png)
+
+
