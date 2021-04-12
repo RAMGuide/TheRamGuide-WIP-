@@ -44,7 +44,7 @@ tRFC is the refresh period. Meaning it is the time that the memory takes to refr
 
 # tREFI
 
-tREFI is the average periodic refresh interval for the DRAM. 
+tREFI is the average periodic refresh interval for the DRAM. Meaning on average every tREFI there will be a refresh command addressed. Refresh commands however can be postponed up to 8 times on DDR3 & DDR4 and 4 times on DDR5. These refreshes are postponed, not cancelled. So they will occur eventually and the average time spent refreshing is the same. The time spent refreshing can be calculated by tRFC/tREFI. E.G 400 tRFC and 65535 tREFI, 400/65535 = 0.610360876%
 
 # tCKE
 
