@@ -12,14 +12,10 @@ Physical ranks are what most think of when they think of ranks. A logical rank i
 Logical ranks are different in that they require multiplue rank packages. If you have 2 logical ranks this means your packages contain two chips, each part of a different rank. This is very common in server memory but is very rare on consumer memory. The only case currently known of logical ranks on consumer UDIMM's is early corsair sticks using 4Gb MMR. 4Gb MMR being two 4Gb MFR chips in a single package. These sticks were single sided dual rank 8GB sticks.
 The total ranks that the stick consists of is the product of logical and physical ranks. This is how 8Rx4 sticks are possible with only 36 packages, the packages in this case would have 4 logical ranks.
 
+## Types of PCB's
 
-Explain types of PCB's
-
-UDIMM - 
-^ can be ecc
-SODIMM - 
-RDIMM - 
-LRDIMM - 
+There are four main types of PCB's, these being, UDIMM's, SODIMM's, RDIMM's and LRDIMM's.
+UDIMM's are unbuffered memory dimms in a standard dimm format 
 
 
 ## 'A' UDIMM PCB's
@@ -88,6 +84,8 @@ These sticks do not include ECC.
 
 B0 
 
+31.3mm compenstated length (length from pin to ball)
+
 ![image](https://user-images.githubusercontent.com/77159913/114349744-a4b57380-9bab-11eb-9fd7-db31303b91e3.png)
 ![image](https://user-images.githubusercontent.com/77159913/114349912-d8909900-9bab-11eb-99c4-263850be89ab.png)
 ![image](https://user-images.githubusercontent.com/77159913/114349943-e3e3c480-9bab-11eb-981d-fa72df5b7c76.png)
@@ -96,6 +94,8 @@ B0
 
 
 B1
+16.3mm compenstated length
+
 ![image](https://user-images.githubusercontent.com/77159913/114504429-34bdf080-9c72-11eb-822b-7502938afcb4.png)
 ![image](https://user-images.githubusercontent.com/77159913/114504531-56b77300-9c72-11eb-8d72-6d06630e5b08.png)
 ![image](https://user-images.githubusercontent.com/77159913/114504538-5b7c2700-9c72-11eb-9541-5a16a74ffdf8.png)
@@ -110,7 +110,7 @@ B2
 
 ## 'C' UDIMM PCB's
 
-The C family of UDIMM PCB's consists only of the C0 PCB. The C0 PCB is a 1Rx16 non-ecc pcb. This PCB due to using 16 bit wide chips only has 4 chips. It is decent in clock speed potential with it being shown hitting 4533mt/s. This PCB is used by almost all 2GB DDR4 sticks and some 4GB sticks.
+The C family of UDIMM PCB's consists only of the C0 PCB. The C0 PCB is a 1Rx16 non-ecc pcb. This PCB due to using 16 bit wide chips only has 4 chips. It is decent in clock speed potential with it being shown hitting 4533mt/s. This PCB is used by almost all 2GB DDR4 sticks and very rarely in 4GB sticks, it is a very rare pcb.
 
 C0
 ![image](https://user-images.githubusercontent.com/77159913/114504916-f1b04d00-9c72-11eb-8956-9c62689d29f6.png)
@@ -121,6 +121,10 @@ C0
 
 
 ## 'F' UDIMM PCB's
+
+The F family of UDIMM PCB's consists only of the F0 PCB. F0 PCB is very much essetially a double sided C0 making it a 2Rx16 PCB. This PCB is seen in some early 4GB sticks such as Corsair V4.14 sticks. This PCB like C0 is very rare. Clock speed potential for this PCB is completely unknown however in theorey it should be slightly behind the B1 2Rx8 PCB.
+
+18.74mm max compendsated length
 
 F0
 ![image](https://user-images.githubusercontent.com/77159913/114505135-45bb3180-9c73-11eb-8ecc-935cb200fcea.png)
