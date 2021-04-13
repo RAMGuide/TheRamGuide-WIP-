@@ -1,4 +1,4 @@
-## Memory Timings
+# Memory Timings
 
 ## Primary Timings
 
