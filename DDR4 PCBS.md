@@ -1,4 +1,31 @@
+# DDR4 PCB's
+
+## 'a'Rx'b' notation.
+
+The 'a'Rx'b' notation notates the configuration of the dimm. 
+The 'a' is the amount of ranks on the stick including physical and logical ranks, more on this later. So if you had 1Rx'b', you would have a single rank stick. Thus 2Rx'b' would be a dual rank stick.
+The 'b' is the width of the IC's not to be confused with the count of the IC's. These two get very commonly mixed up. So if you have a 1Rx8 memory stick, this means you have memory chips that are 8 bits wide. Thus with a non-ecc UDIMM, you will have 8 chips. But however if you have a 1Rx16 stick, the chips are 16 bits wide, meaning you only need four to achieve the standard bus width of 64bits for ddr4.
+
+## Physical and logical ranks.
+
+Physical ranks are what most think of when they think of ranks. A logical rank is an array of memory packages that make up the 72/64 bit wide bus. So if you have 16 packages, all 8 bits wide on a non-ecc UDIMM. You would have 2 physical ranks.
+Logical ranks are different in that they require multiplue rank packages. If you have 2 logical ranks this means your packages contain two chips, each part of a different rank. This is very common in server memory but is very rare on consumer memory. The only case currently known of logical ranks on consumer UDIMM's is early corsair sticks using 4Gb MMR. 4Gb MMR being two 4Gb MFR chips in a single package. These sticks were single sided dual rank 8GB sticks.
+The total ranks that the stick consists of is the product of logical and physical ranks. This is how 8Rx4 sticks are possible with only 36 chips.
+
+
+
+Explain 1Rx8, 2Rx16, etc.
+
+UDIMM - Unbuffered DIMM
+
+
+## 'A' PCB's
+
+'A' pcbs are 1Rx8 UDIMM non-ecc pcbs. These PCB's are very common for single rank usage with x8 IC's being the most common in consumer sticks.
+
 A0
+
+
 ![image](https://user-images.githubusercontent.com/77159913/114346201-68cbdf80-9ba6-11eb-8985-65841729db4b.png)
 ![image](https://user-images.githubusercontent.com/77159913/114346554-06271380-9ba7-11eb-8553-1418d17721a4.png)
 ![image](https://user-images.githubusercontent.com/77159913/114346623-2060f180-9ba7-11eb-9ef1-0caea372a73d.png)
@@ -37,6 +64,8 @@ B0
 ![image](https://user-images.githubusercontent.com/77159913/114349744-a4b57380-9bab-11eb-9fd7-db31303b91e3.png)
 ![image](https://user-images.githubusercontent.com/77159913/114349912-d8909900-9bab-11eb-99c4-263850be89ab.png)
 ![image](https://user-images.githubusercontent.com/77159913/114349943-e3e3c480-9bab-11eb-981d-fa72df5b7c76.png)
+![image](https://user-images.githubusercontent.com/77159913/114505882-5ddf8080-9c74-11eb-87ab-2b93f5bbfeaa.png)
+![image](https://user-images.githubusercontent.com/77159913/114505894-646df800-9c74-11eb-978d-c123d7648754.png)
 
 
 B1
