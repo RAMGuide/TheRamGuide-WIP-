@@ -39,12 +39,17 @@ This PCB in 2021 is no longer produced for performance memory applications by an
 Why might you want an A0 PCB?
 You might want an A0 PCB if you are using an older platform such as z170, z270 or even z370. These platforms can in cases be optimised for opperation with A0 sticks, and this optimisation can cause them to struggle with running newer A1, A2 or A3 pcb sticks. Making A0 in some cases the better choice.
 
+This PCB is also very commonly confused with the A1 pcb. With somehow this PCB earning it's self the 'A1' name in early day of DDR4 which it is still called by some overclockers today. If you see someone talk about an A1 PCB they are most likely talking about the A0 PCB and just saying the wrong name. 
+
 ![image](https://user-images.githubusercontent.com/77159913/114346201-68cbdf80-9ba6-11eb-8985-65841729db4b.png)
 ![image](https://user-images.githubusercontent.com/77159913/114346554-06271380-9ba7-11eb-8553-1418d17721a4.png)
 ![image](https://user-images.githubusercontent.com/77159913/114346623-2060f180-9ba7-11eb-9ef1-0caea372a73d.png)
 ![image](https://user-images.githubusercontent.com/77159913/114346723-44243780-9ba7-11eb-9810-cb6c3050640a.png)
 
 A1
+
+The A1 pcb is the 2nd revision of the A style PCB. This PCB is quite different to other A style PCB's having 9 memory pads, being a 10 layer design and sharing it's design with the D1 ECC PCB. The difference between A1 and D1 is very simple, the PCB is A1 if the 9th memory pad is vacant and D1 if populated. This PCB was designed for 2400 JEDEC operation and is quite a substanital improvement over the original A0 PCB. This PCB due to never being used in performance memory is still quite unknown with clock speed potential. However this PCB has been seen achieving ~5000mt/s.
+
 
 ![image](https://user-images.githubusercontent.com/77159913/114347819-eee92580-9ba8-11eb-819b-9e8b3bceaf14.png)
 ![image](https://user-images.githubusercontent.com/77159913/114347832-f7416080-9ba8-11eb-974e-571f0dfc2903.png)
