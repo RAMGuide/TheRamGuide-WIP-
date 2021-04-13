@@ -84,7 +84,7 @@ These sticks do not include ECC.
 
 B0 
 
-The B0 UDIMM 2Rx8 PCB is a double sided PCB based off the A0 PCB. Like A0 this PCB suffers from poor package placement and most specifically poor DQ routing causing traces to be very long. As this PCB is based off the already quite garbage A0 PCB but it is dual rank, B0 is the worst DDR4 UDIMM non-ecc PCB. This PCB is so bad in fact that over 4000 can be near impossible with this PCB.
+The B0 UDIMM 2Rx8 PCB is a double sided PCB based off the A0 PCB. Like A0 this PCB suffers from poor package placement and most specifically poor DQ routing causing traces to be very long. As this PCB is based off the already quite garbage A0 PCB but it is dual rank, B0 is the worst DDR4 UDIMM non-ecc PCB. This PCB is so bad in fact that over 4000 can be near impossible with this PCB. Much Like A0, B0 is no longer produced for performance memory kits.
 
 31.3mm compenstated length (length from pin to ball)
 
@@ -96,6 +96,9 @@ The B0 UDIMM 2Rx8 PCB is a double sided PCB based off the A0 PCB. Like A0 this P
 
 
 B1
+
+As there is no dual sided variant of the A1/D1 pcb B1 is confusingly a double sided 2Rx8 PCB based off the A2 PCB. Like A0 to B0, B1 is a worse PCB then A2 due to the complications of being dual rank. However this PCB is the best 2Rx8 PCB, with variants of this PCB being pushed over 5000mt/s.
+
 16.3mm compenstated length
 
 ![image](https://user-images.githubusercontent.com/77159913/114504429-34bdf080-9c72-11eb-822b-7502938afcb4.png)
@@ -104,6 +107,9 @@ B1
 ![image](https://user-images.githubusercontent.com/77159913/114504557-62a33500-9c72-11eb-8e60-5c6d22cb2736.png)
 
 B2
+
+The B2 memory PCB is a dual sided 2Rx8 PCB based off the A3 PCB. Like with A2 to A3, B1 to B2 is a regression with the larger pad spacing causing worse routing. This PCB like A3 exists so that wide 16Gb packages can be used, with the maximum package size going from 9x13mm (B1) to 10.2x11mm (B2). This PCB like B1 is quite strong and can achieve 5000mt/s+.
+
 ![image](https://user-images.githubusercontent.com/77159913/114504667-92ead380-9c72-11eb-94cd-a65792c7ff78.png)
 ![image](https://user-images.githubusercontent.com/77159913/114504687-9b430e80-9c72-11eb-8ac4-0592103534b9.png)
 ![image](https://user-images.githubusercontent.com/77159913/114504710-a26a1c80-9c72-11eb-9eb7-e44b29a71425.png)
