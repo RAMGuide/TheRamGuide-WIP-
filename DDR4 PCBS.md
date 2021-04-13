@@ -84,6 +84,8 @@ These sticks do not include ECC.
 
 B0 
 
+The B0 UDIMM 2Rx8 PCB is a double sided PCB based off the A0 PCB. Like A0 this PCB suffers from poor package placement and most specifically poor DQ routing causing traces to be very long. As this PCB is based off the already quite garbage A0 PCB but it is dual rank, B0 is the worst DDR4 UDIMM non-ecc PCB. This PCB is so bad in fact that over 4000 can be near impossible with this PCB.
+
 31.3mm compenstated length (length from pin to ball)
 
 ![image](https://user-images.githubusercontent.com/77159913/114349744-a4b57380-9bab-11eb-9fd7-db31303b91e3.png)
@@ -124,7 +126,7 @@ C0
 
 The F family of UDIMM PCB's consists only of the F0 PCB. F0 PCB is very much essetially a double sided C0 making it a 2Rx16 PCB. This PCB is seen in some early 4GB sticks such as Corsair V4.14 sticks. This PCB like C0 is very rare. Clock speed potential for this PCB is completely unknown however in theorey it should be slightly behind the B1 2Rx8 PCB.
 
-18.74mm max compendsated length
+18.74mm max compentsated length
 
 F0
 ![image](https://user-images.githubusercontent.com/77159913/114505135-45bb3180-9c73-11eb-8ecc-935cb200fcea.png)
