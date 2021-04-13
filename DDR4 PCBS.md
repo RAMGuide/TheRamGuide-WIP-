@@ -58,6 +58,9 @@ The A1 pcb is the 2nd revision of the A style PCB. This PCB is quite different t
 ![image](https://user-images.githubusercontent.com/77159913/114349571-7172e480-9bab-11eb-9927-bc3265979ef8.png)
 
 A2
+
+The A2 pcb is the best A style PCB for performance along with being the best clocking DDR4 PCB. A revision of this PCB holds the world record for DDR4 memory frequency currently at 7156.4mt/s. This PCB dropped the 9th pad seen with A1 and moved all of the chips very close to the DQ pins to optimise trace routing. This PCB is used by almost all new 1Rx8 sticks and is the go to choice for overclocking.
+
 ![image](https://user-images.githubusercontent.com/77159913/114348234-9a927580-9ba9-11eb-83a7-5192610e537a.png)
 ![image](https://user-images.githubusercontent.com/77159913/114348209-92d2d100-9ba9-11eb-8b9d-fc38618caee1.png)
 ![image](https://user-images.githubusercontent.com/77159913/114348177-89e1ff80-9ba9-11eb-815f-24fc93ba1a7d.png)
@@ -66,6 +69,8 @@ A2
 ![image](https://user-images.githubusercontent.com/77159913/114349498-57d19d00-9bab-11eb-9046-9e7b0dbd390e.png)
 
 A3
+
+The A3 PCB is a revision of the A2 pcb which exists to move supported package sizes from 9x13mm (A2) to 10.2x11.0mm (A3). This was done so that wide 16Gb memory IC's are able to fit onto this PCB. This PCB is a very slight regression when compared to A2, but it still clocks extremely well, seen doing 6666mt/s as a max freqency attempt and 6000mt/s stable. 
 
 ![image](https://user-images.githubusercontent.com/77159913/114348319-b4cc5380-9ba9-11eb-8971-c74063208030.png)
 ![image](https://user-images.githubusercontent.com/77159913/114348335-bac23480-9ba9-11eb-993c-fecaaba798fa.png)
@@ -104,6 +109,8 @@ B2
 
 
 ## 'C' UDIMM PCB's
+
+The C family of UDIMM PCB's consists only of the C0 PCB. The C0 PCB is a 1Rx16 non-ecc pcb. This PCB due to using 16 bit wide chips only has 4 chips. It is decent in clock speed potential with it being shown hitting 4533mt/s. This PCB is used by almost all 2GB DDR4 sticks and some 4GB sticks.
 
 C0
 ![image](https://user-images.githubusercontent.com/77159913/114504916-f1b04d00-9c72-11eb-8956-9c62689d29f6.png)
