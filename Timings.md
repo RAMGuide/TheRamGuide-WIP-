@@ -4,11 +4,17 @@
 
 ## tAA (Cas latency, CL)
 
+
 ## tCWL
 
 ## tRCD
 
 ## tRP
+
+tRP is the delay between when the precharge command is addressed and when the bank(s) are ready for a subsequent activation command. In short this is the delay between closing a row and being able to open a new one.
+
+![image](https://user-images.githubusercontent.com/77159913/114517194-72764580-9c81-11eb-88d6-50a8511507a4.png)
+
 
 ## tRAS
 
