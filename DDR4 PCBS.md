@@ -10,21 +10,29 @@ The 'b' is the width of the IC's not to be confused with the count of the IC's. 
 
 Physical ranks are what most think of when they think of ranks. A logical rank is an array of memory packages that make up the 72/64 bit wide bus. So if you have 16 packages, all 8 bits wide on a non-ecc UDIMM. You would have 2 physical ranks.
 Logical ranks are different in that they require multiplue rank packages. If you have 2 logical ranks this means your packages contain two chips, each part of a different rank. This is very common in server memory but is very rare on consumer memory. The only case currently known of logical ranks on consumer UDIMM's is early corsair sticks using 4Gb MMR. 4Gb MMR being two 4Gb MFR chips in a single package. These sticks were single sided dual rank 8GB sticks.
-The total ranks that the stick consists of is the product of logical and physical ranks. This is how 8Rx4 sticks are possible with only 36 chips.
+The total ranks that the stick consists of is the product of logical and physical ranks. This is how 8Rx4 sticks are possible with only 36 packages, the packages in this case would have 4 logical ranks.
 
 
+Explain types of PCB's
 
-Explain 1Rx8, 2Rx16, etc.
+UDIMM - 
+^ can be ecc
+SODIMM - 
+RDIMM - 
+LRDIMM - 
 
-UDIMM - Unbuffered DIMM
 
+## 'A' UDIMM PCB's
 
-## 'A' PCB's
+'A' UDIMM pcbs are physically 1Rx8 pcbs. These PCB's are very common for single rank usage with x8 IC's being the most common in single rank consumer sticks.
+Almost all single rank consumer sticks are A style PCB's.
+These sticks do not include ECC.
 
-'A' pcbs are 1Rx8 UDIMM non-ecc pcbs. These PCB's are very common for single rank usage with x8 IC's being the most common in consumer sticks.
+As mentioned earlier with the early MMR corsair sticks, these PCB's can be used with dual rank packages thus allowing them to be dual rank sticks by having logical ranks.
 
 A0
 
+The A0 pcbs is the original 1Rx8 non-ecc UDIMM pcb which debuted in 2012. This PCB due to being a dinsour is complete ass and clocks like shit. If you want over 4500 DO NOT buy an A0 memory kit. 
 
 ![image](https://user-images.githubusercontent.com/77159913/114346201-68cbdf80-9ba6-11eb-8985-65841729db4b.png)
 ![image](https://user-images.githubusercontent.com/77159913/114346554-06271380-9ba7-11eb-8553-1418d17721a4.png)
@@ -57,7 +65,11 @@ A3
 ![image](https://user-images.githubusercontent.com/77159913/114349162-e4c82680-9baa-11eb-936c-1ed12d917b88.png)
 
 
+## 'B' UDIMM PCB's
 
+'B' UDIMM pcbs are 2Rx8 UDIMM pcbs. These PCB's are very common for dual rank usage with x8 IC's being the most common in consumer dual rank sticks.
+Almost all dual rank consumer sticks are B style PCB's.
+These sticks do not include ECC.
 
 B0 
 
@@ -80,12 +92,18 @@ B2
 ![image](https://user-images.githubusercontent.com/77159913/114504710-a26a1c80-9c72-11eb-9eb7-e44b29a71425.png)
 ![image](https://user-images.githubusercontent.com/77159913/114504768-b746b000-9c72-11eb-8e6d-3408c5dabd32.png)
 
+
+## 'C' UDIMM PCB's
+
 C0
 ![image](https://user-images.githubusercontent.com/77159913/114504916-f1b04d00-9c72-11eb-8956-9c62689d29f6.png)
 ![image](https://user-images.githubusercontent.com/77159913/114504955-fd037880-9c72-11eb-9945-da07ef8f044d.png)
 ![image](https://user-images.githubusercontent.com/77159913/114504973-02f95980-9c73-11eb-99f1-644ee63a952e.png)
 ![image](https://user-images.githubusercontent.com/77159913/114504977-068ce080-9c73-11eb-83db-1974c59871c3.png)
 ![image](https://user-images.githubusercontent.com/77159913/114505003-11477580-9c73-11eb-87f1-2b8f96819ea1.png)
+
+
+## 'F' UDIMM PCB's
 
 F0
 ![image](https://user-images.githubusercontent.com/77159913/114505135-45bb3180-9c73-11eb-8ecc-935cb200fcea.png)
