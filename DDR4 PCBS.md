@@ -32,7 +32,12 @@ As mentioned earlier with the early MMR corsair sticks, these PCB's can be used 
 
 A0
 
-The A0 pcbs is the original 1Rx8 non-ecc UDIMM pcb which debuted in 2012. This PCB due to being a dinsour is complete ass and clocks like shit. If you want over 4500 DO NOT buy an A0 memory kit. 
+The A0 pcbs is the original 1Rx8 non-ecc UDIMM pcb which debuted in 2012 having revisions into 2014. It is designed by spec for 2133 JEDEC operation, though doubling these clocks isn't difficult. This PCB due to its age is very suboptimial in package placement, DQ routing, and pretty much everything else. Due to this PCB's age and sub-optimial design it struggles with clocking past the ~4400~4533. However good A0 pcb's such as the ones used in 4600 cl19 non-rgb G.Skill A0 sticks can achieve ~4700~4800. This pcb whilst struggling with clocks also does not time as well as newer revisions due to it's poor configuration. This PCB at least with Samsung B-Die memory IC's has very intense senstivity to low temperatures, that can start at ~10C.
+
+This PCB in 2021 is no longer produced for performance memory applications by any manufacter, so if you were worried about getting this PCB in a new memory kit do not be worried it isn't produced. This PCB however can catch you out in used memory kits.
+
+Why might you want an A0 PCB?
+You might want an A0 PCB if you are using an older platform such as z170, z270 or even z370. These platforms can in cases be optimised for opperation with A0 sticks, and this optimisation can cause them to struggle with running newer A1, A2 or A3 pcb sticks. Making A0 in some cases the better choice.
 
 ![image](https://user-images.githubusercontent.com/77159913/114346201-68cbdf80-9ba6-11eb-8985-65841729db4b.png)
 ![image](https://user-images.githubusercontent.com/77159913/114346554-06271380-9ba7-11eb-8553-1418d17721a4.png)
