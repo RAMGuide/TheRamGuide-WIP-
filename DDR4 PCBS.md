@@ -1,5 +1,13 @@
 # DDR4 PCB's
 
+
+## What makes a PCB good and another bad?
+A better PCB is one that grants better signal integrity and also shorter trace routing, with the latter usually inducing the former.
+
+Layer counts.
+
+
+
 ## 'a'Rx'b' notation.
 
 The 'a'Rx'b' notation notates the configuration of the dimm. 
