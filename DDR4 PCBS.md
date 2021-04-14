@@ -7,7 +7,9 @@ A better PCB is one that grants better signal integrity and also shorter trace r
 Layer counts.
 
 A0 address - "Length to 8th DRAM Compensated" 222.92mm
+
 A2 address - "Length to 8th DRAM Compensated" 244.7991mm
+
 A0 - 
 ![image](https://user-images.githubusercontent.com/77159913/114537569-b410eb80-9c95-11eb-89d4-28937963172a.png)
 A2
