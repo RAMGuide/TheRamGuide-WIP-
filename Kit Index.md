@@ -1,6 +1,6 @@
 
-|Type & Size|Name|Color/RGB|Speed & Timings|Voltage|Product Number |Possible ICs|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Type & Size | Name | Color/RGB | Speed & Timings | Voltage | Product Number | Possible ICs |
+|:-----------:|:----:|:---------:|:---------------:|:-------:|:--------------:|:------------:|
 |DDR4 2x8GB|TeamGroup Dark Pro|Black|3000 15-15-15-35 |1.35V|TDPRD416G3000HC15ADC01|Samsung 8Gb B Die|
 |DDR4 2x8GB|TeamGroup Dark Pro|Black|3000 14-14-14-31 |1.35V|TDPRD416G3000HC14ADC01|Samsung 8Gb B Die|
 |DDR4 2x8GB|TeamGroup Dark Pro|Black|3200 16-16-16-36 |1.35V|TDPRD416G3200HC16ADC01|Samsung 8Gb B Die?|
