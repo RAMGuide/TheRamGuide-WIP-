@@ -6,3 +6,8 @@
 | DDR4 | 2x8GB | TeamGroup Dark Pro | 3200 | 14-14-14-31 | 1.35V | TDPGD416G3200HC14ADC01 | Samsung 8Gb B Die |
 | DDR4 | 2x8GB | TeamGroup Dark Pro | 3333 | 17-18-18-39 | 1.35V | TDPRD416G3333HC17ADC01 | Samsung 8Gb B Die? |
 | DDR4 | 2x8GB | TeamGroup Dark Pro | 3466 | 16-18-18-38 | 1.35V | TDPGD416G3466HC16CDC01 | Samsung 8Gb B Die |
+| DDR4 | 2x8GB | Crucial Ballistix Max | 5100 | 19-26-26-48 | 1.50V | BLM2K8G51C19U4B | Micron 8Gb Rev N |
+| DDR4 | 2x8GB | Crucial Ballistix Max | 4400 | 1-19-19-46 | 1.40V | BLM2K8G44C19U4B | Micron 8Gb Rev E |
+| DDR4 | 2x8GB | Crucial Ballistix Elite | 4000 | 19-19-19-39 | 1.35V | BLE2K8G4D40BEEAK | Micron 8Gb Rev E |
+| DDR4 | 2x8GB | Crucial Ballistix Max RGB | 4000 | 19-19-19-39 | 1.35V | BLM2K8G40C18U4BL | Micron 8Gb Rev E |
+| DDR4 | 2x8GB | Crucial Ballistix Max | 4000 | 19-19-19-39 | 1.35V | BLM2K8G40C18U4B | Micron 8Gb Rev E |
