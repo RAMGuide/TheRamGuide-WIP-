@@ -6,14 +6,24 @@ A better PCB is one that grants better signal integrity and also shorter trace r
 
 Layer counts.
 
-A0 address - "Length to 8th DRAM Compensated" 222.92mm
+A0 CA/CTL/CLK - "Length to 8th DRAM Compensated" 222.92mm
 
-A2 address - "Length to 8th DRAM Compensated" 244.7991mm
-
-A0 - 
 ![image](https://user-images.githubusercontent.com/77159913/114537569-b410eb80-9c95-11eb-89d4-28937963172a.png)
-A2
+
+A2 CA/CTL/CLK - "Length to 8th DRAM Compensated" 244.7991mm
+
 ![image](https://user-images.githubusercontent.com/77159913/114536732-b45cb700-9c94-11eb-8069-01aeb929b374.png)
+
+A0 DQ - 
+![image](https://user-images.githubusercontent.com/77159913/114860587-8a8bc780-9e2f-11eb-82be-e1cc33fead06.png)
+
+
+
+A2 DQ - 
+![image](https://user-images.githubusercontent.com/77159913/114860523-72b44380-9e2f-11eb-9f08-24d31a7bdfc4.png)
+
+
+
 
 ## 'a'Rx'b' notation.
 
