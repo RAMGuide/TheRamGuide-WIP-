@@ -5,7 +5,13 @@
 ### tAA (Cas latency, CL)
 
 
+
+Please do note that in this guide Cas latency will not be called tCL since it is technically a incorrect name for the timing. It will be refrerred to as tAA, CL or simply cas latency in this guide.
+
 ### tCWL
+
+
+
 
 ### tRCD
 
@@ -17,6 +23,16 @@ tRP is the delay between when the precharge command is addressed and when the ba
 
 
 ### tRAS
+
+tRAS is the minimum command delay between the activate and precharge commands
+
+
+Common myths:
+There is are many different common myths for a 'minimum' tRAS value, and none of these rules are right. As mentioned before tRAS is a minimum delay, meaning command periods can go over this value without a problem. It isn't a fixed value that dictates anything like many have been lead to believe.
+Common 'rules' for a minimum tRAS I have heard are the following:
+
+CL + tRCD + 2 = 
+
 
 ### tRC
 
