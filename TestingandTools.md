@@ -9,3 +9,4 @@ For checking current timings and subtimings on [Ryzen](https://zentimings.proton
 - [TM5](http://testmem.tz.ru/tm5.rar) (Rar file, so need to change it to .zip) with [anta77 extreme profile](https://drive.google.com/file/d/1uegPn9ZuUoWxOssCP4PjMjGW9eC_1VJA/)
 - [OCCT testing](https://www.ocbase.com/)
 - [MemTest (not x86)](https://hcidesign.com/memtest/) -- Open up a couple installations each with ~2000 MBs allocated:
+- [Random-x](https://github.com/tevador/RandomX) -- For FCLK testing on Ryzen. Boot up and listen for crackling to determine instability. 
