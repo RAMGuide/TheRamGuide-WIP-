@@ -32,7 +32,7 @@ tRAS is the minimum command delay between the activate and precharge commands
 
 
 Common myths:
-There is are many different common myths for a 'minimum' tRAS value, and none of these rules are right. As mentioned before tRAS is a minimum delay, meaning command periods can go over this value without a problem. It isn't a fixed value that dictates anything like many have been lead to believe.
+There is are many different common myths for a 'minimum' tRAS value or a value to set tRAS too based off other timings, and none of these rules are correct. As mentioned before tRAS is a minimum command period delay, meaning the command periods can go over this value without a problem. It isn't a fixed value that dictates a fixed time period like many have been lead to believe.
 Common 'rules' for a minimum tRAS I have heard are the following:
 
 CL + tRCD = tRAS 
@@ -42,23 +42,32 @@ CL + tRCD + tRTP = tRAS
 tRAS + CL + tRCD = tRAS 
 CL + TRCD + TRRD + TRP = tRAS 
 
-And many more. The objective fact is every single one of these 'rules' for what you should either set tRAS to or use as a minimum tRAS value are false. 
+And many more. The objective fact is every single one of these 'rules' for what you should either set tRAS to or use as a minimum tRAS value are completely false, and hold no truth to them. 
 
-What is the actual minimum value for the tRAS timing?
-As tRAS itself is a minimum command period delay, there is no minimum value for tRAS. If your system allows you to set it to sometihng like 2 or 3 and you do not need a tRAS limit those values will work just fine. They won't be ignored, those values will be the actual tRAS value. There is no minimum 'electrical' value like people have been mislead to believe, this belief is just false. tRAS is a minimum command period delay, it doesn't have a minimum value.
+#### What is the actual minimum value for the tRAS timing?
+As tRAS itself is a minimum command period delay, there is no 'minimum' value for tRAS. If your system allows you to set it to sometihng like 2 or 3 and you do not need a tRAS limit for stability those values will work just fine. They won't be ignored, those values will be used for tRAS. There is no minimum 'electrical' value like people have been mislead to believe, this belief is just false. tRAS is a minimum command period delay, it doesn't have a minimum value.
 
-However there is a minimum value at which lowering tRAS will no longer do anything at all. This is the point where tRAS no longer extends any command delays relative to the actual delays for the timings. The minimum the activate to precharge delay for read operations is:
+However there is a minimum value at which lowering tRAS will no longer do anything at all. This is the point where tRAS no longer extends any command delays relative to the actual delays for command periods. The minimum the activate to precharge delay for read operations is:
 tRCD + tRTP
 The tRCD value used when tRCDWR and tRCDRD timings are independantly defined is tRCDRD.
-This can be easily determined from the diagram above where tRCD = activate command to read command delay , and tRTP = read command to precharge command delay. This concept is rather simple, and obvious for why the following rules are incorrect when it is understood.
+This can be easily determined from the diagram above where tRCD = activate command to read command delay , and tRTP = read command to precharge command delay. This concept is rather simple, and obvious for why the rules previously defined are incorrect.
 Therefore setting tRAS to or below this value causes tRAS to have absolutely no affect on a memory read operation.
+
 The minimum activate to precharge delay for writing is:
 tRCD + tCWL + BC + tWR
+
+
 The tRCD value used when tRCDWR and tRCDRD timings are independantly defined is tRCDWR.
 BC on DDR4 is 2 clock cycles, on DDR5 it is 4 clock cycles.
 
+Like the forumla for reads can be easily determined from the diagram below where tCD is the activate command to write command delay, tCWL is the write command to first data delay, BC is the first data to last data clock gap when burst chop is enabled. And finally tWR is last data to the precharge command.
+
+#### Why does the write have to include the CAS command and the burst?
+The write has to include those due to the precharge arcitecture that is used by these memory systems. The precharage architechture e allows the physical memory to run at a much lower clock speed then both the transfer rate and the I/O bus. On DDR4 an 8n prefetch architecture is used. This means that the internal memory bus is 8 times wider then the I/O bus. So with an 8 bit memory chip, the internal bus width is 64 bits. This means that the transfer rate divided by 8 is equal to the internal memory clock as the internal memory bus is not DDR.
 
 This can be understood when the following diagram is observed.
+
+
 ![image](https://user-images.githubusercontent.com/77159913/115368205-35263080-a20a-11eb-978e-48140129354f.png)
 ![JESD79-4C P132](https://www.jedec.org/standards-documents/docs/jesd79-4a)
 
@@ -67,7 +76,7 @@ Thus if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (which
 
 
 #### Why is tRAS = tCL + tRCD + 2 false and where did the rule come from?
-
+There are many different ways to directly prove that this rule is false. One of which was already mentioned above. This rule doesn't dictate anything, but where did this rule actually come from? 
 
 
 ### tRC
