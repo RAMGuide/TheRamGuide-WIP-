@@ -51,7 +51,12 @@ Common myths:
 There is are many different common myths for a 'minimum' tRAS value or a value to set tRAS too based off other timings, and none of these rules are correct. As mentioned before tRAS is a minimum command period delay, meaning the command periods can go over this value without a problem. It isn't a fixed value that dictates a fixed time period like many have been lead to believe.
 Common 'rules' for a minimum tRAS I have heard are the following:
 
-CL + tRCD = tRAS | CL + tRCD + 2 = tRAS | CL + tRCD + tRP = tRAS | CL + tRCD + tRTP = tRAS | tRAS + CL + tRCD = tRAS | CL + TRCD + TRRD + TRP = tRAS 
+`CL + tRCD = tRAS
+CL + tRCD + 2 = tRAS
+CL + tRCD + tRP = tRAS
+CL + tRCD + tRTP = tRAS
+tRAS + CL + tRCD = tRAS
+CL + TRCD + TRRD + TRP = tRAS` 
 
 And many more. The objective fact is every single one of these 'rules' for what you should either set tRAS to or use as a minimum tRAS value are completely false, and hold no truth to them. 
 
