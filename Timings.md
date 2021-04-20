@@ -9,6 +9,7 @@
 Please do note that in this guide Cas latency will not be called tCL since it is technically a incorrect name for the timing. It will be refrerred to as tAA, CL or simply cas latency in this guide.
 
 ![image](https://user-images.githubusercontent.com/77159913/115357843-639f0e00-a200-11eb-9b2f-2cd5dec64df7.png)
+alatron978#7416
 
 
 ### tCWL
