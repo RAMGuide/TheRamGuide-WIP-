@@ -1,12 +1,28 @@
 # Memory Timings
 
+
+
+## Important background:
+
+### Prefetch architecture
+
+Many DDR memory systems use prefetching technology to reduce the internal memory clock while still allowing for high transfer rates. The prefetch architecture uses an interal memory bus that is larger then the I/O bus by however many times the prefetch architecture used is. On DDR3 and DDR4 and 8n prefetch architecture is used, this means that interal memory bus is 8 times wider then the external I/O bus. On DDR5 this was increased to 16n due to the technological innovation requred in getting DDR5 to the high transfer rates of 6400MT/s that it is specified to run at. This allows DDR4 at 3200MT/s and DDR5 at 6400MT/s to have the same internal memory clock speed. 
+
+The prefetch aritechture works by having the data stored transferred from the internal core memory into prefetch buffers for reads and the data transferred from the prefetch 
+
+
+Many DDR ram system use the prefetch achitechture. The prefetch architechture allows the physical memory to run at a much lower clock speed then both the transfer rate and the I/O bus clock. On DDR4 an 8n prefetch architecture is used. This means that the internal memory bus is 8 times wider then the I/O bus. So with an 8 bit memory chip, the internal bus width is 64 bits. This means that the transfer rate divided by 8 is equal to the internal memory clock as the internal memory bus is not DDR.
+
+The prefetch arcitecture causes the data to be moved from the physical memory into what is called the precharge buffers as soon as the read command is recieved by the memory. This allows the data in the physical memory to even be compeltely oblitered while still allowing the correct data to be transferred. In a write however the data is not with the memory system, it has to be moved into the prefetch buffers and then into the physical memory. This means the row can't be precharged and closed until the data is actually in the physical memory. Meaning the memory must wait through the burst and through the CWL period.
+
+
 ## Primary Timings
 
 ### tAA (Cas latency, CL)
 
+When the read command is addressed the interal data transfer starts and lasts for a single internal clock cycle
 
-
-Please do note that in this guide Cas latency will not be called tCL since it is technically a incorrect name for the timing. It will be refrerred to as tAA, CL or simply cas latency in this guide.
+Please do note that in this guide CAS latency will not be called tCL since it is technically a incorrect name for the timing. It will be refrerred to as tAA, CL or simply cas latency in this guide.
 
 ![image](https://user-images.githubusercontent.com/77159913/115357843-639f0e00-a200-11eb-9b2f-2cd5dec64df7.png)
 Diagram by alatron978#7416 
