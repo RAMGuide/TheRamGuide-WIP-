@@ -35,7 +35,39 @@ Common myths:
 There is are many different common myths for a 'minimum' tRAS value, and none of these rules are right. As mentioned before tRAS is a minimum delay, meaning command periods can go over this value without a problem. It isn't a fixed value that dictates anything like many have been lead to believe.
 Common 'rules' for a minimum tRAS I have heard are the following:
 
-CL + tRCD + 2 = 
+CL + tRCD = tRAS 
+CL + tRCD + 2 = tRAS 
+CL + tRCD + tRP = tRAS 
+CL + tRCD + tRTP = tRAS 
+tRAS + CL + tRCD = tRAS 
+CL + TRCD + TRRD + TRP = tRAS 
+
+And many more. The objective fact is every single one of these 'rules' for what you should either set tRAS to or use as a minimum tRAS value are false. 
+
+What is the actual minimum value for the tRAS timing?
+As tRAS itself is a minimum command period delay, there is no minimum value for tRAS. If your system allows you to set it to sometihng like 2 or 3 and you do not need a tRAS limit those values will work just fine. They won't be ignored, those values will be the actual tRAS value. There is no minimum 'electrical' value like people have been mislead to believe, this belief is just false. tRAS is a minimum command period delay, it doesn't have a minimum value.
+
+However there is a minimum value at which lowering tRAS will no longer do anything at all. This is the point where tRAS no longer extends any command delays relative to the actual delays for the timings. The minimum the activate to precharge delay for read operations is:
+tRCD + tRTP
+The tRCD value used when tRCDWR and tRCDRD timings are independantly defined is tRCDRD.
+This can be easily determined from the diagram above where tRCD = activate command to read command delay , and tRTP = read command to precharge command delay. This concept is rather simple, and obvious for why the following rules are incorrect when it is understood.
+Therefore setting tRAS to or below this value causes tRAS to have absolutely no affect on a memory read operation.
+The minimum activate to precharge delay for writing is:
+tRCD + tCWL + BC + tWR
+The tRCD value used when tRCDWR and tRCDRD timings are independantly defined is tRCDWR.
+BC on DDR4 is 2 clock cycles, on DDR5 it is 4 clock cycles.
+
+
+This can be understood when the following diagram is observed.
+![image](https://user-images.githubusercontent.com/77159913/115368205-35263080-a20a-11eb-978e-48140129354f.png)
+![JESD79-4C P132](https://www.jedec.org/standards-documents/docs/jesd79-4a)
+
+
+Thus if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (which ever is lowest) the tRAS timing has absolutely no effect on anything. It does not cause issues, or a performance regression, it simply does nothing at all. Whether you set tRAS to this value or the register minimum value doesn't matter at all.
+
+
+#### Why is tRAS = tCL + tRCD + 2 false and where did the rule come from?
+
 
 
 ### tRC
