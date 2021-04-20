@@ -52,11 +52,17 @@ There is are many different common myths for a 'minimum' tRAS value or a value t
 Common 'rules' for a minimum tRAS I have heard are the following:
 
 `CL + tRCD = tRAS
+
 CL + tRCD + 2 = tRAS
+
 CL + tRCD + tRP = tRAS
+
 CL + tRCD + tRTP = tRAS
+
 tRAS + CL + tRCD = tRAS
+
 CL + TRCD + TRRD + TRP = tRAS` 
+
 
 And many more. The objective fact is every single one of these 'rules' for what you should either set tRAS to or use as a minimum tRAS value are completely false, and hold no truth to them. 
 
