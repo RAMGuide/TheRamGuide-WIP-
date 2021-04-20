@@ -1,7 +1,7 @@
 Organize later
 
 ## Stats
-For checking current timings and subtimings on [Ryzen](https://zentimings.protonrom.com/) and on [Intel](https://www.asrock.com/mb/Intel/Z170%20OC%20Formula/#Download)
+For checking current timings and subtimings on [Ryzen](https://zentimings.protonrom.com/) and on [Intel](https://asrock-timing-configurator.software.informer.com/download/)
 
 ## Stress Testing
 
