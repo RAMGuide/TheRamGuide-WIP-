@@ -1,7 +1,7 @@
 Organize later
 
 ## Stats
-- For checking current timings and subtimings on [Ryzen](https://zentimings.protonrom.com/) and on [Intel](https://asrock-timing-configurator.software.informer.com/download/)
+- For checking current timings and subtimings on [Ryzen](https://zentimings.protonrom.com/) and on [Intel](https://www.asrock.com/mb/Intel/Z170%20OC%20Formula/#Download)
 - General software for checking various settings (not that detailed for memory)--[CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)
 - Great program for checking temperatures (not always reported correctly, voltages (be weary which one you're looking at), and settings alike--[Hwinfo](https://www.hwinfo.com/download.php)
 ## Stress Testing
