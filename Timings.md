@@ -62,21 +62,33 @@ BC on DDR4 is 2 clock cycles, on DDR5 it is 4 clock cycles.
 
 Like the forumla for reads can be easily determined from the diagram below where tCD is the activate command to write command delay, tCWL is the write command to first data delay, BC is the first data to last data clock gap when burst chop is enabled. And finally tWR is last data to the precharge command.
 
+![image](https://user-images.githubusercontent.com/77159913/115368205-35263080-a20a-11eb-978e-48140129354f.png)
+![JESD79-4C P132](https://www.jedec.org/standards-documents/docs/jesd79-4a)
+
+
 #### Why does the write have to include the CAS command and the burst?
 The write has to include those due to the precharge arcitecture that is used by these memory systems. The precharage architechture e allows the physical memory to run at a much lower clock speed then both the transfer rate and the I/O bus. On DDR4 an 8n prefetch architecture is used. This means that the internal memory bus is 8 times wider then the I/O bus. So with an 8 bit memory chip, the internal bus width is 64 bits. This means that the transfer rate divided by 8 is equal to the internal memory clock as the internal memory bus is not DDR.
+
+The prefetch arcitecture causes the data to be moved from the physical memory into what is called the precharge buffers as soon as the read command is recieved by the memory. This allows the data in the physical memory to even be compeltely oblitered while still allowing the correct data to be transferred. In a write however the data is not with the memory system, it has to be moved into the prefetch buffers and then into the physical memory. This means the row can't be precharged and closed until the data is actually in the physical memory. Meaning the memory must wait through the burst and through the CWL period.
 
 This can be understood when the following diagram is observed.
 
 
-![image](https://user-images.githubusercontent.com/77159913/115368205-35263080-a20a-11eb-978e-48140129354f.png)
-![JESD79-4C P132](https://www.jedec.org/standards-documents/docs/jesd79-4a)
+
 
 
 Thus if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (which ever is lowest) the tRAS timing has absolutely no effect on anything. It does not cause issues, or a performance regression, it simply does nothing at all. Whether you set tRAS to this value or the register minimum value doesn't matter at all.
 
 
 #### Why is tRAS = tCL + tRCD + 2 false and where did the rule come from?
-There are many different ways to directly prove that this rule is false. One of which was already mentioned above. This rule doesn't dictate anything, but where did this rule actually come from? 
+There are many different ways to directly prove that this rule is false. One of which was already mentioned above. This rule doesn't dictate anything, but where did this rule actually come from and how can the original justification be disproven? 
+The main place I have seen as a reference for this rule is a post on Overclock.net by Raja@Asus.
+
+I can't find the original post so I'll do this later.
+
+![image](https://user-images.githubusercontent.com/77159913/115372694-81736f80-a20e-11eb-9236-e024f467e650.png)
+The image used to substaniate this rule.
+
 
 
 ### tRC
@@ -86,6 +98,11 @@ There are many different ways to directly prove that this rule is false. One of 
 ### tCCD
 
 tCCD is the CAS to CAS command delay for the DRAM. This means it is the gap in clock cycles between two CAS commands being addressed. On DDR4 and DDR5 this timing is spilt into tCCD_S and tCCD_L for the CAS to CAS command delay for a different bank and same bank respectively. This CAS to CAS delay applies to both read to read and write to write scenarios.
+
+These timings are extremely important for memory performance, infact so much that if you raise these timings both from to 4 from 6 on DDR4, you will loose a third of your memory bandwidth which is insane.
+This of course carries into tRDRD and tWRWR timings when those are preferred.
+Reasoning for this:
+
 
 As this applies to read to read and write to write scenarios many platforms spilt these timings into tRDRD and tWRWR timings. More detail on these timings below where tertiary timings are explained.
 
@@ -132,6 +149,9 @@ tRFC is the refresh period. Meaning it is the time that the memory takes to refr
 tREFI increases the DRAM's sensitivity to temperature as the hotter the DRAM is the faster the charge stored in the DRAM's capacitor leaks. tREFI however also reduces power output and thus temperature as the DRAM consumes more power when refreshing then under any other operation. 
 
 tREFI although being a temperature sensitive timing can generally simplely be maxed out under majority of circumstances. 'Maxing out' is setting the timing to the maximum value the platform supports. Whether that be a bios limitation or a CPU register limitation though usually the latter. On most platforms with this timings exposed this value is 65535 for tREFI.
+
+Common myths:
+tRFC should be a multiplue of tRC, in most cases 7 or 8. This rule is completely incorrect.
 
 ### tCKE
 
