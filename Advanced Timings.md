@@ -44,7 +44,8 @@ tRP is the delay between when the precharge command is addressed and when the ba
 
 ### tRAS
 
-tRAS is the minimum command delay between the activate and precharge commands
+tRAS is the minimum command period between the activate and precharge commands, this delay is a minimum delay and thus is an 'extension timing' meaning that it extends a command period and it does not dictate anything directly. An extension timing doesn't dictate a command period, it just dictates the minimum clock cycles for a command period.
+tRAS as a timing has no performance impact when an activate to activate command period is extended by the tRC timing. This concept is later explained in the tRC section as it is crucial to have an understanding of the tRC timing to understand this concept.
 
 
 Common myths:
@@ -114,6 +115,14 @@ The image used to substaniate this rule.
 
 
 ### tRC
+
+tRAS is the minimum command period between two activate and an activate and refresh command, this delay like tRAS is a minimum delay and thus it is an 'extension timing'.
+
+tRC and tRAS relation. 
+
+
+tRC minimum perform
+
 
 ## Subtimings 
 
