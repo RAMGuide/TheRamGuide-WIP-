@@ -6,14 +6,14 @@
 
 ### Prefetch architecture
 
-Many DDR memory systems use prefetching technology to reduce the internal memory clock while still allowing for high transfer rates. The prefetch architecture uses an interal memory bus that is larger then the I/O bus by however many times the prefetch architecture used is. On DDR3 and DDR4 and 8n prefetch architecture is used, this means that interal memory bus is 8 times wider then the external I/O bus. On DDR5 this was increased to 16n due to the technological innovation requred in getting DDR5 to the high transfer rates of 6400MT/s that it is specified to run at. This allows DDR4 at 3200MT/s and DDR5 at 6400MT/s to have the same internal memory clock speed. 
+Many DDR memory systems use prefetching technology to reduce the internal memory clock while still allowing for high transfer rates. The prefetch architecture uses an interal memory bus that is larger then the I/O bus by however many times the prefetch architecture used is. On DDR3 and DDR4 and 8n prefetch architecture is used, this means that interal memory bus is 8 times wider then the external I/O bus. On DDR5 this was increased to 16n due to the technological innovation requred in getting DDR5 to the high transfer rates of 6400MT/s that it is specified to run at. This allows DDR4 at 3200MT/s and DDR5 at 6400MT/s to have the same internal core memory clock speed. 
 
-The prefetch aritechture works by having the data stored transferred from the internal core memory into prefetch buffers for reads and the data transferred from the prefetch 
+The prefetch aritechture works by having the data stored transferred from the internal core memory into prefetch buffers for reads and the data transferred from the prefetch buffers to the internal memory for reads. It takes a single internal memory clock cycle to transfer this data both ways, meaning that when the read command is addressed, 4 I/O bus clock cycles the data will be in the prefetch buffers, and ready to transfer. Due to this having a CAS latency of 2 on DDR4 is not possible.
 
 
 Many DDR ram system use the prefetch achitechture. The prefetch architechture allows the physical memory to run at a much lower clock speed then both the transfer rate and the I/O bus clock. On DDR4 an 8n prefetch architecture is used. This means that the internal memory bus is 8 times wider then the I/O bus. So with an 8 bit memory chip, the internal bus width is 64 bits. This means that the transfer rate divided by 8 is equal to the internal memory clock as the internal memory bus is not DDR.
 
-The prefetch arcitecture causes the data to be moved from the physical memory into what is called the precharge buffers as soon as the read command is recieved by the memory. This allows the data in the physical memory to even be compeltely oblitered while still allowing the correct data to be transferred. In a write however the data is not with the memory system, it has to be moved into the prefetch buffers and then into the physical memory. This means the row can't be precharged and closed until the data is actually in the physical memory. Meaning the memory must wait through the burst and through the CWL period.
+The prefetch arcitecture causes the data to be moved from the physical memory into what is called the precharge buffers as soon as the read command is recieved by the memory. This allows the data in the physical memory to even be compeltely oblitered while still allowing the correct data to be transferred. In a write however the data is not with the memory system, it has to be moved into the prefetch buffers and then into the physical memory. This means the row can't be precharged and closed until the data is actually in the physical memory. Meaning the memory must wait through the burst and through the CWL period. 
 
 
 ## Primary Timings
@@ -89,6 +89,8 @@ Like the forumla for reads can be easily determined from the diagram below where
 ![JESD79-4C P132](https://www.jedec.org/standards-documents/docs/jesd79-4a)
 
 
+Thus if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (which ever is lowest) the tRAS timing has absolutely no effect on anything. It does not cause issues, or a performance regression, it simply does nothing at all. Whether you set tRAS to this value or the register minimum value doesn't matter at all.
+
 #### Why does the write have to include the CAS command and the burst?
 The write has to include those due to the precharge arcitecture that is used by these memory systems. The precharage architechture e allows the physical memory to run at a much lower clock speed then both the transfer rate and the I/O bus. On DDR4 an 8n prefetch architecture is used. This means that the internal memory bus is 8 times wider then the I/O bus. So with an 8 bit memory chip, the internal bus width is 64 bits. This means that the transfer rate divided by 8 is equal to the internal memory clock as the internal memory bus is not DDR.
 
@@ -99,8 +101,6 @@ This can be understood when the following diagram is observed.
 
 
 
-
-Thus if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (which ever is lowest) the tRAS timing has absolutely no effect on anything. It does not cause issues, or a performance regression, it simply does nothing at all. Whether you set tRAS to this value or the register minimum value doesn't matter at all.
 
 
 #### Why is tRAS = tCL + tRCD + 2 false and where did the rule come from?
