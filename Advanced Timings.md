@@ -109,13 +109,25 @@ The image used to substaniate this rule.
 
 
 ### tRC
+`It is recommended to read the tRAS section before reading about tRC.`
 
-tRAS is the minimum command period between two activate and an activate and refresh command, this delay like tRAS is a minimum delay and thus it is an 'extension timing'.
+tRC is the minimum command period between two activate and an activate and refresh command, this delay like tRAS is a minimum delay and thus it is an 'extension timing'.
 
-tRC and tRAS relation. 
+#### tRC and tRAS relation. 
+tRC and tRAS are two very related timings, and as mentioned in the tRAS section, when tRC extends a command period tRAS is not relevant to performance at all and does nothing.
 
 
-tRC minimum perform
+![image](https://user-images.githubusercontent.com/77159913/115889768-94e53b80-a497-11eb-98f8-653d0431e6d6.png)
+alatron978#7416
+
+
+tRC like tRAS has a value at which the timing stops doing anything. This value for tRC is:
+tRAS + tRP 
+If tRAS is limiting a command period or:
+tRCDWR + tCWL + BC + tWR or tRCD + tRTP (highest) + tRP
+These formulae may look familiar as they calculate the minimum ACT to PRE command periods for reads and writes assuming that tRAS does not limit these periods. 
+These formulae are derived from tRC being the ACT to ACT command period.
+Anything below these values causes tRC to do nothing at all. 
 
 
 ## Subtimings 
