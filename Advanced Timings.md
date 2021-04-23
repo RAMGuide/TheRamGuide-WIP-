@@ -86,11 +86,12 @@ Thus, if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (whic
 
 
 #### Why does the write have to include the CAS command and the burst?
-The write must include the tCWL timing and the burst due to the prefetch architecture which was explained earlier. With a read the data is in the memory and gets transferred to the prefetch buffer after 1 physically memory core clock cycle. This means that what ever happens to the data in the physical memory past this point does not matter. The row can be closed without problems as the data is already in the prefetch buffer. Though however with writes the data is being moved into the memory, so the data has to go into the memory before the row can be closed. Thus writing needs extra steps before the row can be closed.
+The write must include the tCWL timing and the burst due to the prefetch architecture which was explained early. With a read the data is in the memory and gets transferred to the prefetch buffer after 1 physically memory core clock cycle. This means that what ever happens to the data in the physical memory past this point does not matter. The row can be closed without problems as the data is already in the prefetch buffer. Though however with writes the data is being moved into the memory, so the data has to go into the memory before the row can be closed. Thus writing needs extra steps before the row can be closed.
 
-
-This can be understood when the following diagram is observed.
-
+This can be understood when the following diagrams are observed.
+![image](https://user-images.githubusercontent.com/77159913/115885599-741ae700-a493-11eb-844c-23050ab34c6d.png)
+![image](https://user-images.githubusercontent.com/77159913/115885611-7715d780-a493-11eb-818f-05b8f8ccce23.png)
+![Micron GENERAL DDR SDRAM FUNCTIONALITY Technical note P3](https://www.micron.com/-/media/client/global/documents/products/technical-note/dram/tn4605.pdf)
 
 
 
