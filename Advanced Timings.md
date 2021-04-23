@@ -6,14 +6,10 @@
 
 ### Prefetch architecture
 
-Many DDR memory systems use prefetching technology to reduce the internal memory clock while still allowing for high transfer rates. The prefetch architecture uses an interal memory bus that is larger then the I/O bus by however many times the prefetch architecture used is. On DDR3 and DDR4 and 8n prefetch architecture is used, this means that interal memory bus is 8 times wider then the external I/O bus. On DDR5 this was increased to 16n due to the technological innovation requred in getting DDR5 to the high transfer rates of 6400MT/s that it is specified to run at. This allows DDR4 at 3200MT/s and DDR5 at 6400MT/s to have the same internal core memory clock speed. 
+Many DDR memory systems use prefetching technology to reduce the internal memory clock while still allowing for high transfer rates. The prefetch architecture uses an internal memory bus that is wider than the I/O bus by however many times the prefetch architecture used is. On DDR3 and DDR4 and 8n prefetch architecture is used, this means that internal memory bus is 8 times wider than the external I/O bus. On DDR5 this was increased to 16n due to the technological innovation required in getting DDR5 to the high transfer rates of 6400MT/s that it is specified to run at. This allows DDR4 at 3200MT/s and DDR5 at 6400MT/s to have the same internal core memory clock speed. 
 
-The prefetch aritechture works by having the data stored transferred from the internal core memory into prefetch buffers for reads and the data transferred from the prefetch buffers to the internal memory for reads. It takes a single internal memory clock cycle to transfer this data both ways, meaning that when the read command is addressed, 4 I/O bus clock cycles the data will be in the prefetch buffers, and ready to transfer. Due to this having a CAS latency of 2 on DDR4 is not possible.
+The prefetch architecture works by having the data stored transferred from the internal core memory into prefetch buffers for reads and the data transferred from the prefetch buffers to the internal memory for reads. It takes a single internal memory clock cycle to transfer this data both ways, meaning that when the read command is addressed, after 4 I/O bus clock cycles the data will be in the prefetch buffers, and ready to transfer. Due to this having a CAS latency below 4 on DDR4 is not possible.
 
-
-Many DDR ram system use the prefetch achitechture. The prefetch architechture allows the physical memory to run at a much lower clock speed then both the transfer rate and the I/O bus clock. On DDR4 an 8n prefetch architecture is used. This means that the internal memory bus is 8 times wider then the I/O bus. So with an 8 bit memory chip, the internal bus width is 64 bits. This means that the transfer rate divided by 8 is equal to the internal memory clock as the internal memory bus is not DDR.
-
-The prefetch arcitecture causes the data to be moved from the physical memory into what is called the precharge buffers as soon as the read command is recieved by the memory. This allows the data in the physical memory to even be compeltely oblitered while still allowing the correct data to be transferred. In a write however the data is not with the memory system, it has to be moved into the prefetch buffers and then into the physical memory. This means the row can't be precharged and closed until the data is actually in the physical memory. Meaning the memory must wait through the burst and through the CWL period. 
 
 
 ## Primary Timings
@@ -44,12 +40,12 @@ tRP is the delay between when the precharge command is addressed and when the ba
 
 ### tRAS
 
-tRAS is the minimum command period between the activate and precharge commands, this delay is a minimum delay and thus is an 'extension timing' meaning that it extends a command period and it does not dictate anything directly. An extension timing doesn't dictate a command period, it just dictates the minimum clock cycles for a command period.
-tRAS as a timing has no performance impact when an activate to activate command period is extended by the tRC timing. This concept is later explained in the tRC section as it is crucial to have an understanding of the tRC timing to understand this concept.
+tRAS is the minimum command period between the activate and precharge commands. In simple terms it is the minimum number of clock cycles between these two commands. This delay is a minimum delay and thus is an 'extension timing' meaning that it extends a command period, and it does not dictate anything directly. An extension timing does not dictate a command period, it just dictates the minimum clock cycles for a command period.
+tRAS as a timing has no performance impact when an activate to activate command period is extended by the tRC timing. This concept is later explained in the tRC section as it is crucial to first have an understanding of the tRC timing.
 
 
 Common myths:
-There is are many different common myths for a 'minimum' tRAS value or a value to set tRAS too based off other timings, and none of these rules are correct. As mentioned before tRAS is a minimum command period delay, meaning the command periods can go over this value without a problem. It isn't a fixed value that dictates a fixed time period like many have been lead to believe.
+There are many different common myths for a 'minimum' tRAS value or a value to set tRAS to based off other timings, and none of these rules are correct. As mentioned before tRAS is a minimum command period delay, meaning that the ACT to PRE command period can go over this value without a problem, it just cannot take less clocks then tRAS. It is not a fixed value that dictates a fixed time period like many have been led to believe.
 Common 'rules' for a minimum tRAS I have heard are the following:
 
 `CL + tRCD = tRAS`
@@ -64,37 +60,34 @@ Common 'rules' for a minimum tRAS I have heard are the following:
 
 `CL + TRCD + TRRD + TRP = tRAS`
 
+These are just a few examples of the many incorrect rules people have made up, usually from misunderstanding the basics of this timing. The objective fact is every single one of these 'rules' for what you should either set tRAS to or use as a minimum tRAS value are entirely false and hold no truth to them at all.
 
-And many more. The objective fact is every single one of these 'rules' for what you should either set tRAS to or use as a minimum tRAS value are completely false, and hold no truth to them. 
 
 #### What is the actual minimum value for the tRAS timing?
-As tRAS itself is a minimum command period delay, there is no 'minimum' value for tRAS. If your system allows you to set it to sometihng like 2 or 3 and you do not need a tRAS limit for stability those values will work just fine. They won't be ignored, those values will be used for tRAS. There is no minimum 'electrical' value like people have been mislead to believe, this belief is just false. tRAS is a minimum command period delay, it doesn't have a minimum value.
-
-However there is a minimum value at which lowering tRAS will no longer do anything at all. This is the point where tRAS no longer extends any command delays relative to the actual delays for command periods. The minimum the activate to precharge delay for read operations is:
+As tRAS itself is a minimum command period delay, there is no 'minimum' value for tRAS unlike some other timings. If your system allows you to set it to something very low such as 2 or 3 and you do not need a tRAS limit for stability, those values will work just fine. They will not be ignored; those values will be used for tRAS. There is no minimum 'electrical' value like people have been misled to believe, this belief is just false. tRAS is a minimum command period delay, there is no minimum electrical value that this timing must be set above.
+However, whilst there is no minimum value for tRAS, there is a point at which lowering tRAS will no longer do anything at all. This is the point where tRAS no longer extends any command delays relative to the actual delays for command periods. The minimum the activate to precharge delay for read operations is:
 tRCD + tRTP
-The tRCD value used when tRCDWR and tRCDRD timings are independantly defined is tRCDRD.
-This can be easily determined from the diagram above where tRCD = activate command to read command delay , and tRTP = read command to precharge command delay. This concept is rather simple, and obvious for why the rules previously defined are incorrect.
-Therefore setting tRAS to or below this value causes tRAS to have absolutely no affect on a memory read operation.
+The tRCD value used when tRCDWR and tRCDRD timings are independently defined is tRCDRD (This is not a Jedec specification however some platforms have both these timings, such as Ryzen and newer Intel (RKL)).
+This can be easily determined from the diagram above where tRCD = activate command to read command delay, and tRTP = read command to precharge command delay. Since tRAS is the minimum activate to precharge delay, if less than or equal to the sum of these values tRAS does nothing for reads. This concept is rather simple, and obvious for why the rules previously defined are incorrect.
+Therefore, setting tRAS to or below this value causes tRAS to have absolutely no effect on a memory read operation. However, it can still limit performance under a write operation.
 
 The minimum activate to precharge delay for writing is:
 tRCD + tCWL + BC + tWR
-
-
-The tRCD value used when tRCDWR and tRCDRD timings are independantly defined is tRCDWR.
+The tRCD value used when tRCDWR and tRCDRD timings are independently defined is tRCDWR.
 BC on DDR4 is 2 clock cycles, on DDR5 it is 4 clock cycles.
 
-Like the forumla for reads can be easily determined from the diagram below where tCD is the activate command to write command delay, tCWL is the write command to first data delay, BC is the first data to last data clock gap when burst chop is enabled. And finally tWR is last data to the precharge command.
+Like the formula for reads can be easily determined from the diagram below where tRCD is the activate command to write command delay, tCWL is the write command to first data delay, BC is the first data to last data clock gap when burst chop is enabled. And finally, tWR is last data to the precharge command.
 
 ![image](https://user-images.githubusercontent.com/77159913/115368205-35263080-a20a-11eb-978e-48140129354f.png)
 ![JESD79-4C P132](https://www.jedec.org/standards-documents/docs/jesd79-4a)
 
 
-Thus if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (which ever is lowest) the tRAS timing has absolutely no effect on anything. It does not cause issues, or a performance regression, it simply does nothing at all. Whether you set tRAS to this value or the register minimum value doesn't matter at all.
+Thus, if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (whichever is lowest) the tRAS timing has absolutely no effect on anything. It does not cause issues, or a performance regression, it simply does nothing at all. Whether you set tRAS to this value or the register minimum value does not matter at all.
+
 
 #### Why does the write have to include the CAS command and the burst?
-The write has to include those due to the precharge arcitecture that is used by these memory systems. The precharage architechture e allows the physical memory to run at a much lower clock speed then both the transfer rate and the I/O bus. On DDR4 an 8n prefetch architecture is used. This means that the internal memory bus is 8 times wider then the I/O bus. So with an 8 bit memory chip, the internal bus width is 64 bits. This means that the transfer rate divided by 8 is equal to the internal memory clock as the internal memory bus is not DDR.
+The write must include the tCWL timing and the burst due to the prefetch architecture which was explained earlier. With a read the data is in the memory and gets transferred to the prefetch buffer after 1 physically memory core clock cycle. This means that what ever happens to the data in the physical memory past this point does not matter. The row can be closed without problems as the data is already in the prefetch buffer. Though however with writes the data is being moved into the memory, so the data has to go into the memory before the row can be closed. Thus writing needs extra steps before the row can be closed.
 
-The prefetch arcitecture causes the data to be moved from the physical memory into what is called the precharge buffers as soon as the read command is recieved by the memory. This allows the data in the physical memory to even be compeltely oblitered while still allowing the correct data to be transferred. In a write however the data is not with the memory system, it has to be moved into the prefetch buffers and then into the physical memory. This means the row can't be precharged and closed until the data is actually in the physical memory. Meaning the memory must wait through the burst and through the CWL period.
 
 This can be understood when the following diagram is observed.
 
