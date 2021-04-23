@@ -114,13 +114,16 @@ The image used to substaniate this rule.
 tRC is the minimum command period between two activate and an activate and refresh command, this delay like tRAS is a minimum delay and thus it is an 'extension timing'.
 
 #### tRC and tRAS relation. 
-tRC and tRAS are two very related timings, and as mentioned in the tRAS section, when tRC extends a command period tRAS is not relevant to performance at all and does nothing.
-
+tRC and tRAS are two very related timings, and as mentioned in the tRAS section, when tRC extends a command period tRAS is not relevant to performance at all and does nothing. This is shown in the following diagram.
 
 ![image](https://user-images.githubusercontent.com/77159913/115889768-94e53b80-a497-11eb-98f8-653d0431e6d6.png)
 alatron978#7416
 
+As shown by this diagram, when tRC has an affect tRAS does nothing to the total command period time. And as a tRP always follows a tRAS which goes into the final clocks of the tRC this is always the case. As shown for tRAS to have an affect it must extend past the point where tRC would usually end and allow for another activate. This means that if you are always tRC limited when tRAS limited, setting tRAS from 40 to 21 will do nothing even if tRAS has an effect at 40, but not 21.
+Lowering tRAS can in cases allow for a lower tRC to be stable though this is uncommon.
+On Intel you do not have to worry about tRC as tRC isn't a timing, and the 'effective' tRC is just the value at which tRC does nothing. 
 
+#### At what value does tRC start to do nothing?
 tRC like tRAS has a value at which the timing stops doing anything. This value for tRC is:
 tRAS + tRP 
 If tRAS is limiting a command period or:
