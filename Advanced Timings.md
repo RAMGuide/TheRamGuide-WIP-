@@ -82,7 +82,7 @@ Like the formula for reads can be easily determined from the diagram below where
 ![JESD79-4C P132](https://www.jedec.org/standards-documents/docs/jesd79-4a)
 
 
-Thus, if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (whichever is lowest) the tRAS timing has absolutely no effect on anything. It does not cause issues, or a performance regression, it simply does nothing at all. Whether you set tRAS to this value or the register minimum value does not matter at all.
+Thus, if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (whichever is highest) the tRAS timing has absolutely no effect on anything. It does not cause issues, or a performance regression, it simply does nothing at all. Whether you set tRAS to this value or the register minimum value does not matter at all.
 
 
 #### Why does the write have to include the CAS command and the burst?
