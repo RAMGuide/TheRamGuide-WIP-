@@ -111,7 +111,7 @@ The image used to substaniate this rule.
 ### tRC
 `It is recommended to read the tRAS section before reading about tRC.`
 
-tRC is the minimum command period between two activate and an activate and refresh command, this delay like tRAS is a minimum delay and thus it is an 'extension timing'.
+tRC is the minimum command period between two activate commands and an activate and refresh command for the same bank of memory, this delay like tRAS is a minimum delay and thus it is an 'extension timing'.
 
 #### tRC and tRAS relation. 
 tRC and tRAS are two very related timings, and as mentioned in the tRAS section, when tRC extends a command period tRAS is not relevant to performance at all and does nothing. This is shown in the following diagram.
@@ -147,7 +147,7 @@ Reasoning for this:
 As this applies to read to read and write to write scenarios many platforms spilt these timings into tRDRD and tWRWR timings. More detail on these timings below where tertiary timings are explained.
 
 Myths: 
-A common myth or these timings is that raising them can help with achieveing higher clock speeds on mainstream DDR4 Intel. However changing tCCD_S and tCCD_L does not do anything if tRDRD_sg, tRDRD_dg, tWRWR_sg or tWRWR_dg are not changed. This timing does not exist to the Intel mainstream IMC although being present in many board bios'. 
+A common myth or these timings is that raising them can help with achieveing higher clock speeds on mainstream DDR4 Intel. However changing tCCD_S and tCCD_L does not do anything if tRDRD_sg, tRDRD_dg, tWRWR_sg or tWRWR_dg are not changed. This timing does not exist to the Intel mainstream IMC although being present in many board bios'. Blame the board manufacters being morons for this.
 
 ![image](https://user-images.githubusercontent.com/77159913/114341623-8d6f8980-9b9d-11eb-9596-94d4ee01b230.png)
 ![JESD79-4C P87](https://www.jedec.org/standards-documents/docs/jesd79-4a)
