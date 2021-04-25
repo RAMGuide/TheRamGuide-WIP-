@@ -252,6 +252,17 @@ tRDRDSCL is the read to read delay for the same bankgroup.
 tRDRDSD is same dimm different rank.
 tRDRDDD is different dimm different rank.
 
+These timings on AMD are very strange, as with tRDRDSC at 1 being full bandwidth it is very clear that this equivlates to tCCD 4. So logic would say that tCCD_S = tRDRDSC + 3. This is further backed up by the data below with tRDRDSC 5 getting around half the bandwidth of tRDRDSC 1, meaning an equivlent tCCD likely of 8.
+
+Meaning these read to read delays are what? Nothing.
+
+![image](https://user-images.githubusercontent.com/77159913/115989534-35576f00-a602-11eb-9b2e-a5b5213a37cd.png)
+![image](https://user-images.githubusercontent.com/77159913/115989536-37b9c900-a602-11eb-9e7f-03d850666089.png)
+tRDRDSC affect on memory read bandwidth.
+Arshia#2457
+
+As can be seen by the above Aida64 read tests with tRDRDSC 1 compared to tRDRDSC 5, bandwidth is essentially halved (Not exactly halved as aida includes ~2~3GB/s of bandwidth as cache, this can be proved with VTune monitoring bandwidth as Aida runs).
+
 #### tRDWR
 
 #### tWRRD
