@@ -139,10 +139,11 @@ Anything below these values causes tRC to do nothing at all.
 
 tCCD is the CAS to CAS command delay for the DRAM. This means it is the gap in clock cycles between two CAS commands being addressed. On DDR4 and DDR5 this timing is spilt into tCCD_S and tCCD_L for the CAS to CAS command delay for a different bank and same bank respectively. This CAS to CAS delay applies to both read to read and write to write scenarios.
 
-These timings are extremely important for memory performance, infact so much that if you raise these timings both from to 4 from 6 on DDR4, you will loose a third of your memory bandwidth which is insane.
+These timings are extremely important for memory performance, infact so much that if you raise these timings both from to 4 from 6 on DDR4, you will loose a third of your memory bandwidth which is very impactful. Infact with all other timings equalised, 3200 and 4800 would have almost identical bandwidths if tCCD was 4 for 3200 and 6 for 4800. These timings are very important to watch for when pushing clocks very high, and if you get horrible performance, they are likely to blame.
 This of course carries into tRDRD and tWRWR timings when those are preferred.
 Reasoning for this:
-
+On DDR4 a burst length of 8 is used and due to the double data rate technology this is 4 I/O bus clock cycles. So a burst lasts for 4 clock cycles, and the gap between two commands to initate a burst being the read or write command is tCCD. Therefore if you have a DDR4 system with tCCD_S and tCCD_L at 6, you will get 2 clock cycles that do nothing after the burst. Meaning that 4 out of 6 clock cycles do something, thus giving you 2 thirds of the original bandwidth. This can also be calculated for other DDR revisions such as DDR5 by using their burst length. E.G, tCCD 10 on DDR5 would be 80% of the original bandwidth due to BL16.
+Minimum possible tCCD is BL/2. (BL16 for DDR5 not 32 as dummy reads and writes are used)
 
 As this applies to read to read and write to write scenarios many platforms spilt these timings into tRDRD and tWRWR timings. More detail on these timings below where tertiary timings are explained.
 
