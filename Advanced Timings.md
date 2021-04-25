@@ -221,15 +221,15 @@ Tertiary timings are platform specific timings that dictate delay between read a
 
 #### tRDRD 
 tRDRD on mainstream intel is the read to read branch of tCCD.
-With tRDRD_sg being for tCCD_L and tRDRD_dg being for tCCD_S. 
+With tRDRD_sg being for tCCD_L and tRDRD_dg being for tCCD_S. And then tRDRD_dr and tRDRD_dd for different rank same dimm and different rank different dimm respectivly.
 sg meaning same bank group and dg meaning different bankgroup.
-
+As these values are pretty much tCCD for reads and writes they can not be set below 4.
 #### tWRWR
 
 tWRWR on mainstream intel is the write to write branch of tCCD.
 With tWRWR_sg being for tCCD_L and tWRWR_dg being for tCCD_S. 
 sg meaning same bank group and dg meaning different bankgroup.
-
+As these values are pretty much tCCD for reads and writes they can not be set below 4.
 #### tRDWR
 tRDWR on mainstream intel is a defineable command delay between the read and write commands. As this is a command delay it is not the actual delay between the read and write bursts. The actual delay is what matters for stability and is defined as; 
 tCWL-CL+tRDWR = read to write burst delay
@@ -246,6 +246,11 @@ Justification:
 ### DDR4 Ryzen AM4
 
 #### tRDRD
+tRDRD on AMD is very strange and different to Intel with the timing not directly being tied to tCCD. 
+tRDRDSC is the read to read delay for a different bankgroup. 
+tRDRDSCL is the read to read delay for the same bankgroup.
+tRDRDSD is same dimm different rank.
+tRDRDDD is different dimm different rank.
 
 #### tRDWR
 
