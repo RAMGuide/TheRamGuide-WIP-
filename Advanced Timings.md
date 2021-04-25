@@ -145,6 +145,20 @@ Reasoning for this:
 On DDR4 a burst length of 8 is used and due to the double data rate technology this is 4 I/O bus clock cycles. So a burst lasts for 4 clock cycles, and the gap between two commands to initate a burst being the read or write command is tCCD. Therefore if you have a DDR4 system with tCCD_S and tCCD_L at 6, you will get 2 clock cycles that do nothing after the burst. Meaning that 4 out of 6 clock cycles do something, thus giving you 2 thirds of the original bandwidth. This can also be calculated for other DDR revisions such as DDR5 by using their burst length. E.G, tCCD 10 on DDR5 would be 80% of the original bandwidth due to BL16.
 Minimum possible tCCD is BL/2. (BL16 for DDR5 not 32 as dummy reads and writes are used)
 
+DDR5 further spilts into tCCD_L_WR (tCCD_L write, there is no tCCD_S_WR) for standard sticks and the following for 3DS ones;
+tCCD_L_slr
+tCCD_L_WR_slr
+tCCD_L_RTW_slr
+tCCD_L_WTR_slr
+tCCD_S_slr
+tCCD_S_RTW_slr
+tCCD_S_WTR_slr
+tCCD_S_dlr
+tCCD_S_RTW_dlr
+tCCD_S_WTR_dlr
+With dlr meaning different logical rank, slr meaning same logical rank WTR meaning write to read, and RTW meaning read to write.
+
+
 As this applies to read to read and write to write scenarios many platforms spilt these timings into tRDRD and tWRWR timings. More detail on these timings below where tertiary timings are explained.
 
 Myths: 
@@ -200,12 +214,52 @@ tRFC should be a multiplue of tRC, in most cases 7 or 8. This rule is completely
 
 Tertiary timings are platform specific timings that dictate delay between read and write operations. Thus including read to read, read to write, write to read and write to write.
 
-# DDR4 mainsteam Intel
+### DDR4 mainsteam Intel
 
-tRDRD
 
-tRDWR
 
-tWRRD
 
-tWRWR
+#### tRDRD 
+tRDRD on mainstream intel is the read to read branch of tCCD.
+With tRDRD_sg being for tCCD_L and tRDRD_dg being for tCCD_S. 
+sg meaning same bank group and dg meaning different bankgroup.
+
+#### tWRWR
+
+tWRWR on mainstream intel is the write to write branch of tCCD.
+With tWRWR_sg being for tCCD_L and tWRWR_dg being for tCCD_S. 
+sg meaning same bank group and dg meaning different bankgroup.
+
+#### tRDWR
+tRDWR on mainstream intel is a defineable command delay between the read and write commands. As this is a command delay it is not the actual delay between the read and write bursts. The actual delay is what matters for stability and is defined as; 
+tCWL-CL+tRDWR = read to write burst delay
+
+Justification:
+
+
+#### tWRRD
+
+
+
+
+
+### DDR4 Ryzen AM4
+
+#### tRDRD
+
+#### tRDWR
+
+#### tWRRD
+
+#### tWRWR
+
+
+### DDR4 Jedec specification
+
+#### tRDWR
+The read to write command delay is to be defined as;
+CL - CWL + RBL / 2 + 1 tCK + tWPRE for a read to write in the same bankgroup.
+CL - CWL + RBL / 2 + 1 tCK + tWPRE for a read to write in a different bankgroup.
+tWPRE is the DQS_t, DQS_c differential WRITE Preamble for a 1 tCK premable. This is 1 clock.
+RBL is the read burst length.
+#### tWRRD
