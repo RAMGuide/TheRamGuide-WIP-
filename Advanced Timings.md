@@ -146,16 +146,27 @@ On DDR4 a burst length of 8 is used and due to the double data rate technology t
 Minimum possible tCCD is BL/2. (BL16 for DDR5 not 32 as dummy reads and writes are used)
 
 DDR5 further spilts into tCCD_L_WR (tCCD_L write, there is no tCCD_S_WR) for standard sticks and the following for 3DS ones;
+
 tCCD_L_slr
+
 tCCD_L_WR_slr
+
 tCCD_L_RTW_slr
+
 tCCD_L_WTR_slr
+
 tCCD_S_slr
+
 tCCD_S_RTW_slr
+
 tCCD_S_WTR_slr
+
 tCCD_S_dlr
+
 tCCD_S_RTW_dlr
+
 tCCD_S_WTR_dlr
+
 With dlr meaning different logical rank, slr meaning same logical rank WTR meaning write to read, and RTW meaning read to write.
 
 
