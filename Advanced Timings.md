@@ -19,11 +19,11 @@ For this reason, timings alone aren't useful and don't tell you anything unless 
 
 #### Memory commands
 
-|Function|Abbreviation | CKE previous cycle| CKE current cyle |CS_n|ACT_n|RAS_n/A16|CAS_n/A15|WE_n/A14|BG0-BG1|BA0-BA1|C2-C0|A12/BC_n|A17,A13,A11|A10/AP|A0-A9|NOTE|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Function|Abbreviation|CKE previous cycle|CKE current cyle|CS_n|ACT_n|RAS_n/A16|CAS_n/A15|WE_n/A14|BG0-BG1|BA0-BA1|C2-C0|A12/BC_n|A17,A13,A11|A10/AP|A0-A9|NOTE|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Mode Register Set|MRS|H|H|L|H|L|L|L|BGBA|V|OP Code|OP Code|OP Code|OP Code|12|
-|Refresh|REF|H|H|L|H|L|L|H|V|V|V|V|V|V|V|V|
-|Self Refresh Entry|SRE|H|L|L|H|L|L|H|V|V|V|V|V|V|V|V|
+|Refresh|REF|H|H|L|H|L|L|H|V|V|V|V|V|V|V|V||
+|Self Refresh Entry|SRE|H|L|L|H|L|L|H|V|V|V|V|V|V|V|V||
 |Self Refresh Exit|SRX|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Single Bank Precharge|PRE|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Precharge all Banks|PREA|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
