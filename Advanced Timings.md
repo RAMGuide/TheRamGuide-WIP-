@@ -21,6 +21,8 @@ For this reason, timings alone aren't useful and don't tell you anything unless 
 
 
 
+
+
 ### Prefetch architecture
 
 Many DDR memory systems use prefetching technology to reduce the internal memory clock while still allowing for high transfer rates. The prefetch architecture uses an internal memory bus that is wider than the I/O bus by however many times the prefetch architecture used is. On DDR3 and DDR4 and 8n prefetch architecture is used, this means that internal memory bus is 8 times wider than the external I/O bus. On DDR5 this was increased to 16n due to the technological innovation required in getting DDR5 to the high transfer rates of 6400MT/s that it is specified to run at. This allows DDR4 at 3200MT/s and DDR5 at 6400MT/s to have the same internal core memory clock speed. 
