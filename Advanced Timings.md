@@ -4,6 +4,20 @@
 
 ## Important background:
 
+### What are memory timings?
+
+#### The basics
+
+Memory frequency is measured in the unit for frequency being hertz. Hertz is cycles per second, meaning if you have something that is running at 5hz, you have 5 cycles per second. Memory timings on the other hand are measured in dividual clock cycles. Memory timings are measured in clock cycles because it is nessesery for the opperation of the memory. Many timings infact are specified in time, but have to be converted to clock cycles for opperation. Time is what is what is important for memory timings, clock cycles only matters if you try to go below a physically impossible value.
+To convert clock cycles to time, you must know what frequency the memory is at, once you know this, the calculation is easy. Frequency is measured in hertz, and hertz is equal to the inverse second. So the reciprical of frequency is equal to time for a clock cycle to occur. This means that if you have memory at 1.6ghz or 1.6 billion hertz, the time of a clock cycle is 1 divided by 1.6 billion which is 0.625 nano seconds or 6.25* 10^-10 seconds.
+This means that to go from frequency to time for a clock cycle in nanoseconds it is just 1/frequency (ghz).
+However if you try this with DDR memory, you must use the correct clock speed. Memory memory is marketted in mhz, for example a generic 3200 cl16 memory kit is marketted in mhz. However these kits actually don't run at 3200mhz. They run at 3200MT/s or 3200mbps. Their frequency in mhz is actually 1600mhz, this is due to DDR, double data rate doubling the effective transfer rate as two transfers are made per clock. MT/s stands for mega transfers per second, meaning, how many million data transfers there are per second and mbps is mega bits per seconds. How many bits can be transferred per second.
+For this reason, timings alone aren't useful and don't tell you anything unless if you know the frequency. Kits with two different cas latencies can actually have the same latency in time. For example, a cas latency 8 1600MT/s has a cas latency in time of 10ns. A kit that is 3 times as fast, at 4800MT/s but with a cas latency of 24, has the same time for the cas latency at 10ns. This is very important to know and to understand because the limit for timings in most cases is time. Every single timing scales with time, so if you double frequency and all timings are on the edge of stability, then you need to double them as well. The edge of stability is when improving the timing by one more tick causes instability. When I say improving I do not mean lowering as some timings are better when raised, such as tREFI.
+
+
+
+
+
 ### Prefetch architecture
 
 Many DDR memory systems use prefetching technology to reduce the internal memory clock while still allowing for high transfer rates. The prefetch architecture uses an internal memory bus that is wider than the I/O bus by however many times the prefetch architecture used is. On DDR3 and DDR4 and 8n prefetch architecture is used, this means that internal memory bus is 8 times wider than the external I/O bus. On DDR5 this was increased to 16n due to the technological innovation required in getting DDR5 to the high transfer rates of 6400MT/s that it is specified to run at. This allows DDR4 at 3200MT/s and DDR5 at 6400MT/s to have the same internal core memory clock speed. 
