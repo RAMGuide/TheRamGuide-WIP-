@@ -65,8 +65,7 @@ The prefetch architecture works by having the data stored transferred from the i
 When the read command is addressed the interal data transfer starts and lasts for a single internal clock cycle
 
 Please do note that in this guide CAS latency will not be called tCL since it is technically a incorrect name for the timing. It will be refrerred to as tAA, CL or simply cas latency in this guide.
-
-![image](https://user-images.githubusercontent.com/77159913/115357843-639f0e00-a200-11eb-9b2f-2cd5dec64df7.png)
+![image](https://user-images.githubusercontent.com/87763051/127588031-2f5fcd49-6fcb-4ead-993f-f92206b18d92.png)
 Diagram by alatron978#7416 
 ###### (Yes I made this one, it isn't a jedec diagram)
 
